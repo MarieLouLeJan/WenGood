@@ -1,70 +1,39 @@
 import React, { useState } from 'react';
 import Modal from '../utils/Modal';
 import logo from '../images/logo-01.png'
-
-import HeroImage from '../images/hero-image-01.jpg';
+import { VscDebugBreakpointData } from 'react-icons/vsc'
 
 function HeroHome() {
 
   const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   return (
-    <section>
-      <div className="max-w-8xl mx-auto pt-20 px-4 sm:px-4 relative">
+    <section className='bg-back-bg'>
+      <div className="max-w-8xl mx-auto px-4 sm:px-4 relative">
 
         <div className="absolute left-0 bottom-0 -ml-20 hidden lg:block pointer-events-none" aria-hidden="true" data-aos="fade-up" data-aos-delay="400">
           
         </div>
 
-        {/* Hero content */}
-        <div className="relative lg:flex md:flex-row pt-32 md:pt-40 md:pb-12 mt-8">
+        <div className="relative lg:flex md:flex-row pt-16 md:pt-24 lg:pt-32">
 
-          {/* Section header */}
-          <div className="max-w-10/12 mx-auto my-8 text-center md:pb-16 basis-2/3">
-            <h1 className="h1 text-gray-400 mb-12" data-aos="fade-up">VOTRE EQUIPE PERSONNELLE</h1>
-            <h2 className="h2 text-gray-400 mb-16" data-aos="fade-up" data-aos-delay="200"> DE RECHERCHE PROJET WEB3</h2>
-            <h4 className="h4 text-gray-400 mb-8 font-medium	">
-              "Wen good project" est une entreprise spécialisée dans la recherche de projets crypto
-            </h4>
-            <h4 className="h4 text-gray-400 mb-8 font-medium	">
-              - Infrastructures - Gaming - NFT -
-            </h4>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              {/* <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Start free trial</a>
-              </div> */}
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Rejoins la communauté</a>
-              </div>
-            </div>
+          <div className="max-w-8/12 mt-36 text-center basis-1/2 lg:text-right lg:my-auto">
+            <p className="text-4xl text-gray-100 mb-4 ml-8 lg:pl-64" data-aos="fade-up" data-aos-delay="200">Votre équipe personnelle de recherche project web3</p>
+            <p className="text-xl text-gray-100">
+              "Wen good project" est une entreprise spécialisée 
+            </p>
+            <p className="text-xl text-gray-100 mb-4">
+              dans la recherche de projets crypto
+            </p>
+            <p className="text-BASE text-blue-100"> INFRASTRUCTURE - GAMING - NFT </p>
           </div>
 
-          {/* Hero image */}
-          {/* <div className='basis-1/3 hidden lg:flex'>
+          <div className='basis-1/2 hidden lg:flex'>
             <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
-              <img className="mx-auto" src={logo} width="504" height="200" alt="Hero" /> */}
-              {/* <a className="absolute group" href="#0" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setVideoModalOpen(true); }} aria-controls="modal">
-                <svg className="w-16 h-16 sm:w-20 sm:h-20 hover:opacity-75 transition duration-150 ease-in-out" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient x1="78.169%" y1="9.507%" x2="24.434%" y2="90.469%" id="a">
-                      <stop stopColor="#EBF1F5" stopOpacity=".8" offset="0%" />
-                      <stop stopColor="#EBF1F5" offset="100%" />
-                    </linearGradient>
-                  </defs>
-                  <circle fill="url(#a)" cx="44" cy="44" r="44" />
-                  <path className="fill-current text-purple-600" d="M52 44a.999.999 0 00-.427-.82l-10-7A1 1 0 0040 37V51a.999.999 0 001.573.82l10-7A.995.995 0 0052 44V44c0 .001 0 .001 0 0z" />
-                </svg>
-              </a> */}
-            {/* </div> */}
-            
-            {/* Modal */}
-            {/* <Modal id="modal" ariaLabel="modal-headline" show={videoModalOpen} handleClose={() => setVideoModalOpen(false)}>
-              <div className="relative pb-9/16">
-                <iframe className="absolute w-full h-full" src="https://player.vimeo.com/video/174002812" title="Video" allowFullScreen></iframe>
-              </div>
-            </Modal> */}
+              <img className="mx-auto" src={logo} width="672" height="300" alt="Hero" />
+            </div>
 
-          {/* </div> */}
+          </div>
 
         </div>
 

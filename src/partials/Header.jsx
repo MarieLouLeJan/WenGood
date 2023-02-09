@@ -30,14 +30,18 @@ function Header() {
     if (location.pathname === '/') {
       return (
         <Scroll.Link className="flex hover:cursor-pointer" to='wengood' spy={true} smooth={true} offset={-200} duration={500} delay={100} >
-          <img src={logo} className='w-20 h-20' alt="wengood" />
-          <h4 className='h4 text-sm my-auto'>WEN GOOD PROJECT</h4>
+          <img src={logo} className='w-20 h-22' alt="wengood" />
+          <div className='my-auto text-center'>
+            <h4 className='h4 text-base tracking-widest'>WEN GOOD </h4>
+            <h3 className='h4 text-xs tracking-widest'>PROJECT</h3>
+          </div>
+
         </Scroll.Link>
       )
     } else if (location.pathname === '/rapports') {
       return (
         <Link to="/" className="flex hover:cursor-pointer ">
-          <img src={logo} className='w-20 h-20' alt="wengood" />
+          <img src={logo} className='w-20 h-22' alt="wengood" />
           <h4 className='h4 text-sm my-auto'>WEN GOOD PROJECT</h4>
         </Link>
       )
@@ -67,7 +71,7 @@ function Header() {
   });
 
   return (
-    <header className="w-full z-30 fixed bg-gray-900">
+    <header className="w-full z-30 fixed bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200">
       <div className=" max-w-8xl mx-auto py-8 px-4 sm:px-6">
         <div className="max-w-full flex items-center justify-between h-20">
 
@@ -85,21 +89,21 @@ function Header() {
               { navHome.map((elem, i) => {
                 return (
                   <li key={i}>
-                    <Scroll.Link  activeClass="text-blue-200 underline underline-offset-8" to={elem} spy={true} smooth={true} offset={-200} duration={500} delay={100} className="h4 text-gray-300 hover:text-blue-200 hover:cursor-pointer px-4 py-2 flex items-center transition duration-150 ease-in-out text-base">
+                    <Scroll.Link  activeClass="text-blue-100 underline underline-offset-8" to={elem} spy={true} smooth={true} offset={-200} duration={500} delay={100} className="h4 text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2 flex items-center transition duration-150 ease-in-out text-base md:px-2">
                       {elem}
                     </Scroll.Link>
                 </li>
                 )
               }) }
               <li>
-                <Link to="/pricing" className="h4 text-base text-gray-300 hover:text-blue-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">RAPPORTS</Link>
+                <Link to="/pricing" className="h4 text-base text-gray-100 hover:text-blue-100 px-4 py-2 flex items-center transition duration-150 ease-in-out">RAPPORTS</Link>
               </li>
             </ul>
 
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link to="/signup" className="h4 text-base btn-sm text-white bg-blue-300 hover:bg-gray-200 hover:text-blue-300 ml-3 rounded-full">Connect wallet</Link>
+                <Link to="/signup" className="h4 text-base btn-sm text-gray-900 bg-blue-100 hover:bg-gray-900 hover:text-blue-100 ml-3 rounded-full">Connect wallet</Link>
               </li>
             </ul>
 

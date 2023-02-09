@@ -25,7 +25,7 @@ import Roadmap from '../partials/Roadmap';
 
 function Home() {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden">
+    <div className="flex flex-col min-h-screen overflow-hidden bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200">
 
       {/*  Site header */}
       <Header />

@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import Transition from '../utils/Transition';
 
 import TabsImage01 from '../images/tabs-image-01.jpg';
-import HeroImage01 from '../images/hero-image-01.jpg';
 import { ImRocket } from 'react-icons/im'
 
 function Tabs2() {
@@ -130,7 +129,7 @@ function Tabs2() {
               >
                 <article className="relative max-w-md mx-auto md:max-w-none">
                   <figure className="md:absolute md:inset-y-0 md:left-0 md:w-1/2">
-                    <img className="w-full h-full object-cover" src={HeroImage01} width="516" height="387" alt="Tabs 02" />
+                    <img className="w-full h-full object-cover" src={TabsImage01} width="516" height="387" alt="Tabs 02" />
                   </figure>
                   <div className="relative bg-gray-800 py-8 md:py-16 px-6 md:pl-16 md:max-w-lg lg:max-w-xl md:ml-auto">
                     <h4 className="h4 mb-2">Easy to start, optimize and scale</h4>
@@ -188,7 +187,7 @@ function Tabs2() {
               >
                 <article className="relative max-w-md mx-auto md:max-w-none">
                   <figure className="md:absolute md:inset-y-0 md:left-0 md:w-1/2">
-                    <img className="w-full h-full object-cover" src={HeroImage01} width="516" height="387" alt="Tabs 02" />
+                    <img className="w-full h-full object-cover" src={TabsImage01} width="516" height="387" alt="Tabs 02" />
                   </figure>
                   <div className="relative bg-gray-800 py-8 md:py-16 px-6 md:pl-16 md:max-w-lg lg:max-w-xl md:ml-auto">
                     <h4 className="h4 mb-2">Easy to start, optimize and scale</h4>

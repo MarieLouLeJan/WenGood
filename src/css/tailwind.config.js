@@ -12,7 +12,7 @@ export default {
       },
       colors: {
         gray: {
-          100: '#F1F1F4',
+          100: '#FFFFFF',
           200: '#F1F1F4',
           300: '#F1F1F4',
           400: '#9BA9B4',
@@ -22,21 +22,14 @@ export default {
           800: '#25282C',
           900: '#151719',
         },
-        purple: {
-          100: '#272343',
-          200: '#272343',
-          300: '#272343',
-          400: '#272343',
-          500: '#272343',
-          600: '#272343',
-          700: '#272343',
-          800: '#272343',
-          900: '#272343',
+        bg: {
+          100: '#2C2855',
+          200: '#1E1B2A',
         },
         blue: {
-          300: '#17526D',
-          200: '#4897ADff',
-          100: '#74D4D8'
+          300: '#64D2E4',
+          200: '#64D2E4',
+          100: '#64D2E4'
         },
         // black: {
         //   100: 
@@ -47,10 +40,9 @@ export default {
         '3/4': '75%',
         '1/1': '100%',
       },
-      // fontFamily: {
-      //   inter: ['Inter', 'sans-serif'],
-      //   'architects-daughter': ['"Architects Daughter"', 'sans-serif']
-      // },
+      fontSize: {
+        xxs: '0.5rem',
+      },
       fontFamily: {
         sans : [ '"Be Vietnam Pro", "sans-serif"' ],        
         titles: [ '"Unbounded", "cursive"' ]
