@@ -49,7 +49,7 @@ export default {
       },
       screens: {
         'sm': '800px',
-        'md': '1100px',
+        'md': '1000px',
         'lg': '1150px'
       },
       // screens: {

@@ -58,7 +58,7 @@
 //                   <div className="flex flex-wrap -mx-3 mb-4">
 //                     <div className="w-full px-3">
 //                       <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Password</label>
-//                       <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
+                    //   <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
 //                     </div>
 //                   </div>
 //                   <div className="flex flex-wrap -mx-3 mb-4">

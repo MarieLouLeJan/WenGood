@@ -12,16 +12,16 @@ function Header() {
   const mobileNav = useRef(null);
 
   const navHome = [
-    "MISSION",
-    "ROADMAP",
-    "TEAM",
-    "MINTPASS"
+    "Mission",
+    "Roadmap",
+    "Team",
+    "Mintpass"
   ]
 
   const navRapport = [
     "NFT",
-    "GAMING",
-    "INFRASTRUCTURE"
+    "Gaming",
+    "Infrastructure"
   ]
 
   const location = useLocation();
@@ -35,14 +35,16 @@ function Header() {
             <h4 className='h4 text-base tracking-widest'>WEN GOOD </h4>
             <h3 className='h4 text-xs tracking-widest'>PROJECT</h3>
           </div>
-
         </Scroll.Link>
       )
     } else if (location.pathname === '/rapports') {
       return (
         <Link to="/" className="flex hover:cursor-pointer ">
           <img src={logo} className='w-20 h-22' alt="wengood" />
-          <h4 className='h4 text-sm my-auto'>WEN GOOD PROJECT</h4>
+          <div className='my-auto text-center'>
+            <h4 className='h4 text-base tracking-widest'>WEN GOOD </h4>
+            <h3 className='h4 text-xs tracking-widest'>PROJECT</h3>
+          </div>
         </Link>
       )
     }
@@ -84,26 +86,44 @@ function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
 
-            {/* Desktop menu links */}
-            <ul className="flex grow justify-end flex-wrap items-center">
-              { navHome.map((elem, i) => {
-                return (
-                  <li key={i}>
-                    <Scroll.Link  activeClass="text-blue-100 underline underline-offset-8" to={elem} spy={true} smooth={true} offset={-200} duration={500} delay={100} className="h4 text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2 flex items-center transition duration-150 ease-in-out text-base md:px-2">
-                      {elem}
-                    </Scroll.Link>
+            {/* Home menu links */}
+            { location.pathname === '/' && (
+              <ul className="flex grow justify-end flex-wrap items-center">
+                { navHome.map((elem, i) => {
+                  return (
+                    <li key={i}>
+                      <Scroll.Link  activeClass="text-blue-100 underline underline-offset-8" to={elem} spy={true} smooth={true} ooffset={-200} duration={500} delay={100} className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2">
+                        {elem}
+                      </Scroll.Link>
+                    </li>
+                  )
+                })}
+                <li>
+                  <Link to="/rapports" className="text-xl text-gray-100 hover:text-blue-100 px-4 py-2 flex items-center transition duratioease-in-out">Rapports</Link>
                 </li>
-                )
-              }) }
-              <li>
-                <Link to="/pricing" className="h4 text-base text-gray-100 hover:text-blue-100 px-4 py-2 flex items-center transition duration-150 ease-in-out">RAPPORTS</Link>
-              </li>
-            </ul>
+              </ul>
+            ) }
 
-            {/* Desktop sign in links */}
+            {/* Rapport menu links */}
+            { location.pathname.includes('/rapports') && (
+              <ul className="flex grow justify-end flex-wrap items-center">
+                <li>
+                  <Link to="/" className=" text-xl text-gray-100 hover:text-blue-100 px-4 py-2 flex items-center transition duratioease-in-out">Home</Link>
+                </li>
+                <li>
+                  <Scroll.Link  activeClass="text-blue-100 underline underline-offset-8" to='Rapports' spy={true} smooth={true} offset={-200} duration={500} delay={100} className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2">
+                        Rapports
+                  </Scroll.Link>
+                 </li>
+              </ul>
+
+            ) }
+
+
+            {/* Desktop connect wallet button*/}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link to="/signup" className="h4 text-base btn-sm text-gray-900 bg-blue-100 hover:bg-gray-900 hover:text-blue-100 ml-3 rounded-full">Connect wallet</Link>
+                <Link to="/signup" className="h4 text-xl btn-sm text-gray-900 bg-blue-100 hover:bg-bg-200 hover:text-blue-100 ml-3 rounded-full">Connect wallet</Link>
               </li>
             </ul>
 
@@ -137,31 +157,12 @@ function Header() {
                 <li>
                   <Link to="/about" className="flex text-gray-300 hover:text-gray-200 py-2">About us</Link>
                 </li>
-                <li className="py-2 my-2 border-t border-b border-gray-700">
-                  <span className="flex text-gray-300 py-2">Support</span>
-                  <ul className="pl-4">
-                    <li>
-                      <Link to="/contact" className="text-sm flex font-medium text-gray-400 hover:text-gray-200 py-2">Contact us</Link>
-                    </li>
-                    <li>
-                      <Link to="/help" className="text-sm flex font-medium text-gray-400 hover:text-gray-200 py-2">Help center</Link>
-                    </li>
-                    <li>
-                      <Link to="/404" className="text-sm flex font-medium text-gray-400 hover:text-gray-200 py-2">404</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <Link to="/signin" className="flex font-medium w-full text-purple-600 hover:text-gray-200 py-2 justify-center">Sign in</Link>
-                </li>
                 <li>
                   <Link to="/signup" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out">Sign up</Link>
                 </li>
               </ul>
             </nav>
-
           </div>
-
         </div>
       </div>
     </header>

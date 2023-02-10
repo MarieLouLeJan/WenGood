@@ -17,8 +17,8 @@ function HeroHome() {
 
         <div className="relative lg:flex md:flex-row pt-16 md:pt-24 lg:pt-32">
 
-          <div className="max-w-8/12 mt-36 text-center basis-1/2 lg:text-right lg:my-auto">
-            <p className="text-4xl text-gray-100 mb-4 ml-8 lg:pl-64" data-aos="fade-up" data-aos-delay="200">Votre équipe personnelle de recherche project web3</p>
+          <div className="max-w-8/12 mt-36 text-center basis-1/2 lg:text-right lg:my-auto" data-aos="fade-up" data-aos-delay="200">
+            <p className="text-4xl text-gray-100 mb-4 ml-8 lg:pl-64">Votre équipe personnelle de recherche project web3</p>
             <p className="text-xl text-gray-100">
               "Wen good project" est une entreprise spécialisée 
             </p>

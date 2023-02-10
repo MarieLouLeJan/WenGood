@@ -1,10 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Transition from '../utils/Transition';
-
-import { ImRocket } from 'react-icons/im'
-import { HiArrowRight } from 'react-icons/hi'
-import { CgArrowLongRight } from 'react-icons/cg'
-import { VscDebugBreakpointDataUnverified, VscDebugBreakpointData } from 'react-icons/vsc'
+import React, { useState, useRef } from 'react';
 
 function Roadmap() {
 
@@ -12,26 +6,20 @@ function Roadmap() {
 
   const tabs = useRef(null);
 
-  
-
   return (
-    <section>
-
-      <div className="max-w-3xl mx-auto text-center ">
-        <h2 className="h2 mb-4" data-aos="fade-up">Roadmap</h2>
-      </div>
+    <section className='mb-8'>
 
       <div className="container mx-auto w-full h-full">
-        <div className="relative wrap overflow-hidden p-10 h-full">
-          <div className="border-2-2 absolute border-opacity-20 border-blue-200 h-5/6 border my-6" style={{left: '50%'}}></div>
+        <div className="relative wrap overflow-hidden h-full">
+          <div className="hidden md:flex border-2-2 absolute border-opacity-100 border-blue-100 h-5/6 border mt-12" style={{left: '50%'}} data-aos="fade-up" data-aos-delay="400"></div>
 
-          <div className="mb-8 flex justify-around items-center w-full right-timeline ">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-900 shadow-xl w-16 h-16 rounded-full">
-              <h3 className="h3 mx-auto font-semibold text-white">Q1</h3>
+          <div className="mb-8 flex justify-around items-center w-full right-timeline" data-aos="fade-up" data-aos-delay="200">
+            <div className="order-1 w-5/12 hidden lg:flex md:flex "></div>
+            <div className="z-20 flex items-center bg-bg-100 border-solid border-4 border-blue-100 order-1 w-24 h-24 rounded-full">
+              <p className="text-3xl mx-auto text-gray-100 text-blue-100">Q1</p>
             </div>
-            <div className=" order-1 bg-gray-900 rounded-lg shadow-xl w-5/12 py-4 h-1/4">
-              <p className="h4 text-lg leading-snug tracking-wide text-gray-300 text-opacity-100 leading-8">
+            <div className=" order-1 rounded-lg pl-6 lg:w-5/12 md:w-5/12 py-4 h-1/4">
+              <p className="text-xl leading-snug tracking-wide text-blue-100 text-opacity-100 leading-8">
                  Lancement du projet
                  <br />
                  Début de construction du site
@@ -44,13 +32,13 @@ function Roadmap() {
           </div>
 
 
-          <div className="mb-8 flex justify-around flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-900 shadow-xl w-16 h-16 rounded-full">
-              <h3 className="h3 mx-auto font-semibold text-white">Q2</h3>
+          <div className="mb-8 flex justify-around flex-row-reverse items-center w-full left-timeline" data-aos="fade-up" data-aos-delay="200">
+            <div className="order-1 w-5/12 lg:flex md:flex hidden"></div>
+            <div className="z-20 flex items-center bg-bg-100 md:border-solid border-4 border-blue-100 order-1 w-24 h-24 rounded-full">
+              <p className="text-3xl mx-auto text-gray-100 text-blue-100">Q2</p>
             </div>
-            <div className=" order-1 bg-gray-900 rounded-lg text-right shadow-xl w-5/12 py-4 h-1/4">
-              <p className="h4 text-lg leading-snug tracking-wide text-gray-300 text-opacity-100 leading-8">
+            <div className="border-r-2 border-blue-100 order-1 text-right pr-6 lg:border-0 lg:w-5/12 md:w-5/12 py-4 h-1/4">
+              <p className=" text-xl leading-snug tracking-wide  text-blue-100 text-opacity-100 leading-8">
                   Livraison des premiers rapports gratuits
                  <br />
                   Création de la 1ere collection de NFT
@@ -60,13 +48,13 @@ function Roadmap() {
             </div>
           </div>
           
-          <div className="mb-8 flex justify-around items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-900 shadow-xl w-16 h-16 rounded-full">
-              <h3 className="h3 mx-auto font-semibold text-white">Q3</h3>
+          <div className="mb-8 flex justify-around items-center w-full right-timeline" data-aos="fade-up" data-aos-delay="200">
+            <div className="order-1 w-5/12 lg:flex md:flex hidden"></div>
+            <div className="z-20 flex items-center bg-bg-100 border-solid border-4 border-blue-100 order-1 w-24 h-24 rounded-full">              
+              <p className="text-3xl mx-auto text-gray-100 text-blue-100">Q3</p>
             </div>
-            <div className=" order-1 bg-gray-900 rounded-lg shadow-xl w-5/12 py-4 h-1/4">
-              <p className="h4 text-lg leading-snug tracking-wide text-gray-300 text-opacity-100 leading-8">
+            <div className=" order-1 rounded-lg pl-6 lg:w-5/12 md:w-5/12 py-4 h-1/4">
+              <p className="text-xl leading-snug tracking-wide  text-blue-100 text-opacity-100 leading-8">
                   Application mobile
                 <br />
                  Annonce de l’utilité du NFT PFP
@@ -78,13 +66,13 @@ function Roadmap() {
             </div>
           </div>
 
-          <div className="mb-8 flex justify-around flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-900 shadow-xl w-16 h-16 rounded-full">
-              <h3 className="h3 mx-auto font-semibold text-white">Q4</h3>
+          <div className="mb-8 flex justify-around flex-row-reverse items-center w-full left-timeline" data-aos="fade-up" data-aos-delay="200">
+            <div className="order-1 w-5/12 lg:flex md:flex hidden"></div>
+            <div className="z-20 flex items-center bg-bg-100 border-solid border-4 border-blue-100 order-1 w-24 h-24 rounded-full">
+              <p className="text-3xl mx-auto text-gray-100 text-blue-100">Q4</p>
             </div>
-            <div className=" order-1 bg-gray-900 rounded-lg text-right shadow-xl w-5/12 py-4 h-1/4">
-              <p className="h4 text-lg leading-snug tracking-wide text-gray-300 text-opacity-100 leading-8">
+            <div className=" order-1 rounded-lg text-right pr-6 lg:w-5/12 md:w-5/12 py-4 h-1/4">
+              <p className="text-xl leading-snug tracking-wide  text-blue-100 text-opacity-100 leading-8">
                   Campagne marketing blablablablablabla
                   <br />
                   Un autre truc
