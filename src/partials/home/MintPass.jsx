@@ -1,5 +1,6 @@
 import React from 'react';
-import pokemon from '../../images/Mintpass/pokemon.jpg'
+import pokemon from '../../images/Mintpass/pokemon.jpg';
+import { VscDebugBreakpointDataUnverified } from 'react-icons/vsc'
 
 function MintPass() {
   return (

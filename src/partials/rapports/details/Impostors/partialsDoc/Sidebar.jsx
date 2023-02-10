@@ -59,7 +59,7 @@ function Sidebar({
           show={sidebarOpen}
           tag="aside"
           id="sidebar"
-          className="fixed left-0 top-64 bottom-0 w-64 bg-gradient-to-r from-bg-200 to-bg-100 h-screen border-r border-t rounded-2xl border-blue-100 md:left-auto md:shrink-0 z-10 md:!opacity-100 md:!block"
+          className="fixed left-0 top-48 bottom-0 w-64 bg-gradient-to-r from-bg-200 to-bg-100 h-screen border-r border-t rounded-2xl border-blue-100 md:left-auto md:shrink-0 z-10 md:!opacity-100 md:!block"
           enter="transition ease-out duration-200 transform"
           enterStart="opacity-0 -translate-x-full"
           enterEnd="opacity-100 translate-x-0"
@@ -68,7 +68,7 @@ function Sidebar({
           leaveEnd="opacity-0"
         >
 
-          <div className="fixed top-0 bottom-0 w-82 sm:px-6 md:pl-0 md:pr-8 overflow-y-auto no-scrollbar mt-48">
+          <div className="fixed top-0 bottom-0 w-82 sm:px-6 md:pl-0 md:pr-8 overflow-y-auto no-scrollbar mt-44">
             <div className="pt-20 md:pt-28 pb-8">
               {/* Docs nav */}
               <nav className="md:block">
@@ -81,7 +81,7 @@ function Sidebar({
                   {categories.map((cat, i) =>
                     (
                       <li key={i}>
-                        <button className="hover:text-blue-100 px-4 py-2 flex  space-x-4 items-center transition duratioease-in-out" onClick={() => closeSideBar(cat)}>
+                        <button className={`hover:text-blue-100 px-4 py-2 flex  space-x-4 items-center transition duratioease-in-out ${title === cat && `text-blue-100`}`} onClick={() => closeSideBar(cat)}>
                           <div className=''>
                             <VscDebugBreakpointDataUnverified size={30} className='text-blue-100'/>
                           </div>
@@ -89,8 +89,6 @@ function Sidebar({
                         </button>
                       </li>
                     ))}
-
-
                 </ul>
               </nav>
             </div>

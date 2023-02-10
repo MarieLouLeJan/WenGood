@@ -2,21 +2,31 @@ import React, { useState, useEffect } from 'react';
 
 import Sidebar from './partialsDoc/Sidebar';
 import MenuButton from './partialsDoc/MenuButton';
-import PageContent from './partialsDoc/DocumentationContent';
+import Resume from './partialsDoc/content/Resume';
 import Feedback from './partialsDoc/Feedback';
 import PageNavigation from './partialsDoc/PageNavigation';
 import SecondaryNav from './partialsDoc/DocumentationNav';
+import Marketing from './partialsDoc/content/Marketing';
+import Gameplay from './partialsDoc/content/Gameplay';
+import Tokenomics from './partialsDoc/content/Tokenomics';
+import Roadmap from './partialsDoc/content/Roadmap';
+import Team from './partialsDoc/content/Team';
+import LeveFond from './partialsDoc/content/LeveFond';
+import Concurrence from './partialsDoc/content/Concurrence';
+import Analyse from './partialsDoc/content/Analyse';
+import { useRef } from 'react';
+
 
 function DocumentationRapport() {
   
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [ title, setTitle ] = useState('')
+  const [ title, setTitle ] = useState('Résumé')
   const [ prev, setPrev ] = useState('') 
   const [ next, setNext ] = useState('')
 
   const categories = [
     'Résumé',
-    'Maketing',
+    'Marketing',
     'Gameplay & Assets',
     'Items & Tokenomics',
     'Roadmap',
@@ -26,18 +36,18 @@ function DocumentationRapport() {
     'Notre analyse'
   ]
 
+  const windowWidth = useRef(window.innerWidth);
+  const windowHeight = useRef(window.innerHeight);
+
   useEffect(() => {
     const index = categories.indexOf(title)
-
     if(index === 0) {
       setPrev('')
       setNext(categories[index + 1])
     } else if (index === 8) {
       setNext('')
-      console.log(categories[index - 1])
       setPrev(categories[index - 1])
     } else if (index > 0 && index < 8) {
-      console.log('salut')
       setPrev(categories[index - 1])
       setNext(categories[index + 1])
     }
@@ -59,7 +69,6 @@ function DocumentationRapport() {
 
                   <article className="flex xl:space-x-12">
 
-                    {/* Main area */}
                     <div className="min-w-0">
 
                       {/* Mobile hamburger + breadcrumbs */}
@@ -72,19 +81,19 @@ function DocumentationRapport() {
                         </div>
                       </div>
 
-                      {/* Article content */}
-                      <PageContent />
-      
-                      {/* Feedback */}
-                      {/* <Feedback /> */}
-      
-                      {/* Page navigation */}
-                      <PageNavigation prev={prev} next={next} />                 
+                      { title === 'Résumé' && <Resume /> }
+                      { title === 'Marketing' && <Marketing /> }
+                      { title === 'Gameplay & Assets' && <Gameplay /> }
+                      { title === 'Items & Tokenomics' && <Tokenomics /> }
+                      { title === 'Roadmap' && <Roadmap /> }
+                      { title === 'Equipe' && <Team /> }
+                      { title === 'Levé de fond' && <LeveFond /> }
+                      { title === 'Concurrence' && <Concurrence /> }
+                      { title === 'Notre analyse' && <Analyse /> }
+
+                      <PageNavigation prev={prev} next={next} setTitle={setTitle} />                 
 
                     </div>
-
-                    {/* Secondary navigation */}
-                    {/* <SecondaryNav />                     */}
 
                   </article>
 

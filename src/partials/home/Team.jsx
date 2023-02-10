@@ -122,9 +122,9 @@ function Team() {
             { team.map((p, i) => {
               const { img, name, position, description, show, twitter } = p;
               return (
-                <div key={i} className={`sm:w-1/2 md:w-1/3 lg:w-1/3 py-4 sm:py-8 sm:px-3 `} data-aos="fade-up" data-aos-anchor="[data-aos-id-team]" onMouseEnter={() => showDesciption(show)} onMouseLeave={() => hideDescription(show)}>
+                <div key={i} className={`sm:w-1/2 md:w-1/3 lg:w-1/3 py-4 sm:py-8 sm:px-3 `} data-aos="fade-up" data-aos-anchor="[data-aos-id-team]">
                   
-                  <img className='rounded-full mb-4 mx-auto border-solid border-2 border-blue-100' src={img} width="200" height="200" alt={name} />
+                  <img className='rounded-full mb-4 mx-auto border-solid border-2 border-blue-100' src={img} width="200" height="200" alt={name}  onMouseEnter={() => showDesciption(show)} onMouseLeave={() => hideDescription(show)} />
                   <div className={`flex flex-col`} >
 
                     <p className={`text-xl mx-auto text-blue-100`}>{name}</p>
