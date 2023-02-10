@@ -1,14 +1,13 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
-import AChevaugeon from '../images/team/Team-AChevaugeon.png';
-import BSoucy from '../images/team/Team-BSoucy.png';
-import JRMabille from '../images/team/Team-JRMabille.png';
-import KWon from '../images/team/Team-KWon.png';
-import Lourimax from '../images/team/Team-Lourimax.png';
-import MBouchard from '../images/team/Team-MBouchard.png';
+import AChevaugeon from '../../images/team/Team-AChevaugeon.png';
+import BSoucy from '../../images/team/Team-BSoucy.png';
+import JRMabille from '../../images/team/Team-JRMabille.png';
+import KWon from '../../images/team/Team-KWon.png';
+import Lourimax from '../../images/team/Team-Lourimax.png';
+import MBouchard from '../../images/team/Team-MBouchard.png';
 import { GrLinkedin } from 'react-icons/gr'
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
-import config from '../css/tailwind.config';
 
 
 function Team() {
@@ -27,9 +26,6 @@ function Team() {
     false
   ])
 
-  const getCurrentBreakpoints = () => {
-    return Object.keys(config.theme.extend.screens).find((key) => `${window.innerWidth}px` > config.theme.extend.screens[key]);
-  }
 
   const showDesciption = (i) => {
     if(window.innerWidth > 1100) {

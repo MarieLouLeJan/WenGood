@@ -1,13 +1,16 @@
 import React from 'react';
-import expertise from '../images/mission/expertise1.png'
-import commu from '../images/mission/commu.png'
-import apprentissage from '../images/mission/apprentissage.png'
+import expertise from '../../images/mission/expertise1.png'
+import commu from '../../images/mission/commu.png'
+import commu2 from '../../images/mission/commu2.png'
+import commu3 from '../../images/mission/commu3.png'
+
+import apprentissage from '../../images/mission/apprentissage.png'
 
 
 function Mission() {
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto my-16 px-4 sm:px-6">
         <div className="pt-10 pb-12 md:pt-16 md:pb-20">
 
 
@@ -25,7 +28,7 @@ function Mission() {
             {/* 2nd item */}
             <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
               <div aria-hidden="true" className="absolute h-1 border-t border-dashed border-blue-100 hidden md:block" style={{ width: 'calc(80% - 32px)', left: 'calc(60% + 48px)', top: '32px' }} data-aos="fade-in" data-aos-delay="400"></div>
-              <img className="w-16 h-16 mb-4" viewBox="0 0 64 64" src={commu}/>
+              <img className="w-16 h-16 mb-4" viewBox="0 0 64 64" src={commu3}/>
               <h4 className="h4 mb-2">Communauté</h4>
               <p className="text-lg text-gray-100 text-center">Plus que tout, nous croyons en la force de la collectivité. Plus qu’une entreprise, nous sommes une vraie communauté, retrouve-toi plongé entre investisseurs novice et aguerris.</p>
             </div>

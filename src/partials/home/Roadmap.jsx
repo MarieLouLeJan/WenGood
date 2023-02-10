@@ -11,7 +11,7 @@ function Roadmap() {
 
       <div className="container mx-auto w-full h-full">
         <div className="relative wrap overflow-hidden h-full">
-          <div className="hidden md:flex border-2-2 absolute border-opacity-100 border-blue-100 h-5/6 border mt-12" style={{left: '50%'}} data-aos="fade-up" data-aos-delay="400"></div>
+          <div className="hidden md:flex border-2-2 absolute border-opacity-100 border-blue-100 h-5/6 border mt-12" style={{left: '50%'}} data-aos="fade-up" data-aos-delay="600"></div>
 
           <div className="mb-8 flex justify-around items-center w-full right-timeline" data-aos="fade-up" data-aos-delay="200">
             <div className="order-1 w-5/12 hidden lg:flex md:flex "></div>

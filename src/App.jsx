@@ -12,6 +12,7 @@ import AOS from 'aos';
 
 import Home from './pages/Home';
 import Rapports from './pages/Rapports';
+import Impostors from './pages/Impostors';
 // import Features from './pages/Features';
 // import Pricing from './pages/Pricing';
 // import Blog from './pages/Blog';
@@ -49,6 +50,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/rapports" element={<Rapports />} />
+        <Route exact path="/rapports/impostors" element={<Impostors/>}/>
 
         {/* <Route path="/features" element={<Features />} />
         <Route path="/pricing" element={<Pricing />} />

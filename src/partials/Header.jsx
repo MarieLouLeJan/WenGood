@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../images/logo-02.png';
+import logo from '../images/wenGood/logo.png';
 import Scroll from 'react-scroll'
 
 
@@ -37,7 +37,7 @@ function Header() {
           </div>
         </Scroll.Link>
       )
-    } else if (location.pathname === '/rapports') {
+    } else if (location.pathname.includes('/rapports')) {
       return (
         <Link to="/" className="flex hover:cursor-pointer ">
           <img src={logo} className='w-20 h-22' alt="wengood" />
@@ -111,9 +111,9 @@ function Header() {
                   <Link to="/" className=" text-xl text-gray-100 hover:text-blue-100 px-4 py-2 flex items-center transition duratioease-in-out">Home</Link>
                 </li>
                 <li>
-                  <Scroll.Link  activeClass="text-blue-100 underline underline-offset-8" to='Rapports' spy={true} smooth={true} offset={-200} duration={500} delay={100} className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2">
+                  <Link to='/rapports'className={`hover:cursor-pointer hover:text-blue-100 lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2 ${location.pathname === '/rapports' && 'text-blue-100 underline underline-offset-8'} `}>
                         Rapports
-                  </Scroll.Link>
+                  </Link>
                  </li>
               </ul>
 
@@ -123,7 +123,7 @@ function Header() {
             {/* Desktop connect wallet button*/}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link to="/signup" className="h4 text-xl btn-sm text-gray-900 bg-blue-100 hover:bg-bg-200 hover:text-blue-100 ml-3 rounded-full">Connect wallet</Link>
+                <Link to="/signup" className="h4 text-lg btn-sm text-gray-900 bg-blue-100 hover:bg-bg-200 hover:text-blue-100 ml-3 rounded-full">Connect wallet</Link>
               </li>
             </ul>
 

@@ -4,11 +4,11 @@ const Element = Scroll.Element;
 
 import Header from '../partials/Header';
 // import PageIllustration from '../partials/PageIllustration';
-import WenGood from '../partials/WenGood';
-import Mission from '../partials/Mission';
-import Team from '../partials/Team';
-import MintPass from '../partials/MintPass';
-import Roadmap from '../partials/Roadmap';
+import WenGood from '../partials/home/WenGood';
+import Mission from '../partials/home/Mission';
+import Team from '../partials/home/Team';
+import MintPass from '../partials/home/MintPass';
+import Roadmap from '../partials/home/Roadmap';
 
 
 
