@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import Transition from '../../../../../utils/TransitionDoc';
+import Scroll from 'react-scroll'
 
 
 import { VscDebugBreakpointDataUnverified, VscChromeClose } from 'react-icons/vsc'
@@ -12,9 +13,12 @@ function Sidebar({
   categories
 }) {
 
-  const closeSideBar = (cat) => {
+  const scroll = Scroll.animateScroll;
+
+  const handleCLick = (cat) => {
     if(sidebarOpen) setSidebarOpen(false)
     setTitle(cat)
+    scroll.scrollToTop()
   };
 
   const sidebar = useRef(null);
@@ -69,19 +73,23 @@ function Sidebar({
         >
 
           <div className="fixed top-0 bottom-0 w-82 sm:px-6 md:pl-0 md:pr-8 overflow-y-auto no-scrollbar mt-44">
-            <div className="pt-20 md:pt-28 pb-8">
+            <div className="pt-8 md:pt-12 pb-8">
               {/* Docs nav */}
               <nav className="md:block">
+                <div className='flex justify-between md:block mx-4 pb-4'>
+                  <p className='text-center text-2xl text-blue-100 md:pb-16 lg:pb-16'>Impostors</p>
                   {sidebarOpen && (
                     <div className=''>
                       <VscChromeClose size={30} className="text-blue-100 sticky left-52" onClick={() => setSidebarOpen(false)}/>
                     </div>
                   )}
+                  </div>
+                  
                   <ul className="text-lg text-gray-100">
                   {categories.map((cat, i) =>
                     (
                       <li key={i}>
-                        <button className={`hover:text-blue-100 px-4 py-2 flex  space-x-4 items-center transition duratioease-in-out ${title === cat && `text-blue-100`}`} onClick={() => closeSideBar(cat)}>
+                        <button className={`hover:text-blue-100 px-4 py-2 flex  space-x-4 items-center transition duratioease-in-out ${title === cat && `text-blue-100`}`} onClick={() => handleCLick(cat)}>
                           <div className=''>
                             <VscDebugBreakpointDataUnverified size={30} className='text-blue-100'/>
                           </div>

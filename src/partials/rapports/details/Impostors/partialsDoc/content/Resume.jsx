@@ -1,5 +1,6 @@
 import React from 'react';
-import impostors1 from '../../../../../../images/rapports/impostors/impostors1.png'
+import impostors from '../../../../../../images/rapports/impostors/resume.png';
+import jauge from '../../../../../../images/rapports/impostors/impostors-jauge.png'
 import { BsTwitter, BsDiscord } from 'react-icons/bs'
 import { BiWorld } from 'react-icons/bi'
 import { Link } from 'react-router-dom';
@@ -8,13 +9,14 @@ import { AiFillMediumSquare } from 'react-icons/ai'
 
 function Resume() {
   return (
-    <div>
+    <div className='max-w-6xl mx-12 mt-16 md:mt-0 lg:mt-0'>
       
-      {/* <p className="text-5xl text-gray-100 mb-4">Impostors</p> */}
-
-      <header className="mb-12">
-        <div className='flex flex-col items-center'>
-          <img width="535" height="1095" src={impostors1} alt="impostors"/>
+      <header className="mb-12 mx-auto">
+        <div className='flex w-10/12 flex-col items-center mx-auto'>
+          <img src={impostors} alt="impostors"/>
+        </div>
+        <div className='flex w-7/12 flex-col items-center mx-auto'>
+          <img src={jauge} alt="impostors-jauge"/>
         </div>
       </header>
 

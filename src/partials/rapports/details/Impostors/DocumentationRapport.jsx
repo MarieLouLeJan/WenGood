@@ -65,19 +65,19 @@ function DocumentationRapport() {
               <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} title={title} setTitle={setTitle} categories={categories}/>
 
               <div className="md:grow md:pl-64 lg:pr-6 xl:pr-0">
-                <div className="pt-24 md:pt-16 pb-8 md:pl-6 lg:pl-12">
+                <div className=" md:pt-16 pb-8 md:pl-6 lg:pl-12">
 
                   <article className="flex xl:space-x-12">
 
                     <div className="min-w-0">
 
                       {/* Mobile hamburger + breadcrumbs */}
-                      <div className="md:hidden flex items-center mb-8">
+                      <div className="md:hidden flex fixed items-center py-4 w-11/12  bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200">
                         {/* Hamburger button */}
                         <MenuButton sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
                         {/* Breadcrumbs */}
-                        <div className="flex items-center text-sm whitespace-nowrap min-w-0 ml-3">
-                          <span className="text-gray-100">{title}</span>
+                        <div className="flex items-center text-lg whitespace-nowrap min-w-0 ml-3">
+                          <span className="text-blue-100">{title}</span>
                         </div>
                       </div>
 

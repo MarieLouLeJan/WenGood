@@ -1,78 +1,63 @@
 import React from 'react';
-import impostors1 from '../../../../../../images/rapports/impostors/impostors1.png'
 import { BsTwitter, BsDiscord } from 'react-icons/bs'
 import { BiWorld } from 'react-icons/bi'
 import { Link } from 'react-router-dom';
 import { AiFillMediumSquare } from 'react-icons/ai'
+import impostors1 from '../../../../../../images/rapports/impostors/tokenomics1.png'
+import impostors2 from '../../../../../../images/rapports/impostors/tokenomics2.png'
+import impostors3 from '../../../../../../images/rapports/impostors/tokenomics3.png'
 
 
 function Tokenomics() {
-  return (
-    <div>
-      
-      {/* <p className="text-5xl text-gray-100 mb-4">Impostors</p> */}
 
+  return (
+    <div className='max-w-6xl mx-12 mt-16'>
+      
       <header className="mb-12">
-        <div className='flex flex-col items-center'>
-          <img width="535" height="1095" src={impostors1} alt="impostors"/>
-        </div>
+        <p className="text-4xl text-blue-100 text-center">Marketing & Réseaux sociaux</p>
       </header>
 
-      <div className='flex w-full mx-auto space-x-8'>
-        <div className="basis-1/2 text-lg text-gray-100 my-auto">
-          <div className='flex flex-end space-x-2 mb-8 justify-end'>
-            <Link to='https://impostors.gg/'>
-              <BiWorld size={30} className="text-blue-100" />
-            </Link>
-            <Link to='https://twitter.com/PlayImpostors'>
-              <BsTwitter size={30} className="text-blue-100" />
-            </Link>
-            <Link to='https://discord.com/invite/impostors'>
-              <BsDiscord size={30} className="text-blue-100" />
-            </Link>
-            <Link to='https://medium.com/@impostors'>
-              <AiFillMediumSquare size={30} className="text-blue-100" />
-            </Link>
+      <div className="text-gray-100 space-y-6">
+
+        <div className="space-y-6 text-justify text-xl">
+          <div className="space-x-8 flex">
+            <ul className='basis-1/2 list-disc space-y-8'>
+              <li className='flex flex-col space-y-4'>
+                <Link to='https://opensea.io/collection/impostors-genesis-aliens' className='flex space-x-4 text-blue-100'>
+                  <BsTwitter size={25}/>
+                  <p><b>Genesis Aliens</b> <span className='text-gray-100'> - Totale supply de 10,420</span></p>
+                </Link>
+                <p>
+                  Les holders pourrons participer à tout les évènements  “Genesis seasons” et ont eu un accès en avant première au jeux. Ils aurons aussi un avantage significatif pour l’aspect P&E. Le prix du mint en WL était de 0.69 et le mint en publique était de 0.96. La totalité de la supply à était vendu en quelques minutes sur la vente publique.
+                </p>
+              </li>
+              <li className='flex flex-col space-y-4'>
+                <Link to='https://opensea.io/collection/impostors-ufo' className='flex space-x-4 text-blue-100'>
+                  <BsTwitter size={25}/>
+                  <p><b>UFO's</b></p>
+                </Link>
+                <p>
+                  Mint gratuit pour les holders du Aliens Genesis, utilisé pour le mini jeux de course d’OVNI/ UFO racing. Gagner des courses permeteras aux utilisateurs de remporter du $BLOOD et des ressources.
+                </p>
+              </li>
+            </ul>
+            <div className='basis-1/2'>
+              <img src={impostors1} alt="impostors1" />
+            </div>
           </div>
-          <p className='text-right lg:leading-9 md:leading-p'>
-            Un jeu de détection sociale comme Among Us, mais avec une qualité graphique AAA et des mécanismes de P&E. C'est le premier jeu dans un métaverre de jeux sociaux qui aura également des mini-jeux tels que la course d'OVNIS, la bataille d’animaux et les modes de jeu créés par les utilisateurs. Imposteurs est un mystère meurtrier PvP où les Innocents doivent trouver les Imposteurs tout en terminant des mini-jeux sur la carte, et le but des Imposteurs est de tuer tout le monde. Chaque salle d'attente peut accueillir jusqu'à 15 personnes.
-          </p>
-        </div>
-        <div className="basis-1/2 text-lg text-gray-100 my-auto">
-          <p className='text-blue-100 mt-4'>
-            GENRE DU JEU
-          </p>
-          <p>
-            Play & Earn / JcJ (joueur contre joueur) social gaming metaverse construit sur Unreal Engine
-          </p>
-          <p className='text-blue-100 mt-4'>
-            PHASE DE DEVELOPPEMENT
-          </p>
-          <p>
-            Bêta privée
-          </p>
-          <p className='text-blue-100 mt-4'>
-            BLOCKCHAIN
-          </p>
-          <p>
-            Ethereum
-          </p>
-          <p className='text-blue-100 mt-4'>
-            PLATFORM
-          </p>
-          <p>
-            PC, macOS (via Epic Games); le supports pour téléphone mobile est planifié.
-          </p>
-          <p className='text-blue-100 mt-4'>
-            TARGET AUDIENCE
-          </p>
-          <p>
-            Gameurs et gameuse de tout âges, jeunes et adultes.
-          </p>
-          
+          {/* <div className="pt-8 space-y-4">
+            <p>
+              On peut retrouver entre autres, la célèbre chaine <b className='text-blue-100'>“Crypto Banter”</b> et ses 600K abonnés ainsi que <b className='text-blue-100'>“CryptoStache”</b> et ses 93k abonnés.
+              Cela inclut des joueurs et des streamers avec un large public web2, ce qui présage une adoption de cet écosystème par des “normies” -personnes ne connaissant pas ou très peu le monde de la blockchain-. Le jeu prendra une approche saisonnière, donc chaque nouvelle saison devrait être lancée avec une nouvelle vague de marketing.
+            </p>
+            <YoutubeEmbed embedId="U2GAR8Xfuow"/>
+            <YoutubeEmbed embedId="i7TAPu3wb90"/>
+            <p>
+
+            </p>
+          </div> */}
         </div>
       </div>
-
     </div>
   );
 }
