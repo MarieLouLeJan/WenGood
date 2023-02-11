@@ -9,7 +9,7 @@ import RapportsList from '../partials/rapports/list/RapportsList'
 function Rapports() {
 
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200">
+    <div className="flex md:flex-col lg:flex-col min-h-screen overflow-hidden bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200">
 
       <Header />
 

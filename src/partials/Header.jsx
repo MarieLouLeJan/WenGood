@@ -74,7 +74,7 @@ function Header() {
 
   return (
     <header className="w-full z-30 fixed bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200">
-      <div className=" max-w-8xl mx-auto py-8 px-4 sm:px-6">
+      <div className=" max-w-8xl mx-auto pb:1 pt-3 md:py-8 lg:py-8 px-4 sm:px-6">
         <div className="max-w-full flex items-center justify-between h-20">
 
           {/* Site branding */}

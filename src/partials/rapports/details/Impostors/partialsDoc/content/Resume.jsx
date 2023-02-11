@@ -21,8 +21,8 @@ function Resume() {
       </header>
 
       <div className='flex w-full  lg:w-10/12 mx-auto space-x-8'>
-        <div className="basis-1/2 text-xl md:text-2xl lg:text-2xl text-gray-100 my-auto">
-          <p className='text-right lg:leading-7 md:leading-7'>
+        <div className="basis-1/2 text-xl md:text-xl lg:text-xl text-gray-100 my-auto">
+          <p className='text-right lg:leading-8 md:leading-7'>
             Un jeu de détection sociale comme Among Us, mais avec une qualité graphique AAA et des mécanismes de P&E. C'est le premier metaverse de jeux sociaux qui aura également des mini-jeux tels que la course d'OVNIS, la bataille d’animaux et les modes de jeu créés par les utilisateurs. Impostors est un mystère meurtrier PvP où les Innocents doivent trouver les Impostors tout en terminant des mini-jeux sur la carte. Le but des Imposteurs est de tuer tout le monde. Chaque salle d'attente peut accueillir jusqu'à 15 personnes.
           </p>
         </div>

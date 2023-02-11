@@ -71,8 +71,8 @@ function RapportsList() {
           <div className='flex justify-center mb-12'>
             <input type="text" className="form-input text-blue-100 border-2 border-blue-100 rounded-full text-center px-12 text-xl" placeholder="Chercher un rapport" value={search} onChange={(e) => handleInputChange(e)}/>
           </div>
-          <div className="max-w-sm md:max-w-none">
-            <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
+          <div className="max-w-full md:max-w-none">
+            <div className="grid gap-x-4 gap-y-12 grid-cols-2 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
 
               {
                 rapports.map((rapport, i) => {
@@ -80,7 +80,7 @@ function RapportsList() {
                   return (
                   <article key={i} className="flex flex-col h-full mx-4" data-aos="fade-up">
                     <header>
-                    <Link className="block mb-6" to={`/rapports/${title}`}>
+                    <Link className="block mb-6 drop-shadow-2xl" to={`/rapports/${title}`}>
                       <figure className="relative h-0 pb-9/16 overflow-hidden rounded-lg">
                         <img className="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src={image} width="352" height="198" alt={title} />
                       </figure>

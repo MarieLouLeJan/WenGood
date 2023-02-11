@@ -57,9 +57,9 @@ function Analyse() {
 
             </div>
 
-            <div className='w-10/12 mx-auto'>
+            <div className='w-9/12 mx-auto'>
 
-            <img src={image} className='rounded-xl' alt="impostors" />
+            <img src={image} className='rounded-xl drop-shadow-2xl' alt="impostors" />
 
             </div>
 

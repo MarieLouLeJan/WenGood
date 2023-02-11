@@ -11,10 +11,10 @@ function HeroHome() {
           
         </div> */}
 
-        <div className="pt-4 md:pt-0 lg:pt-0">
+        <div className="">
 
-          <div className="max-w-8/12 mt-36 mx-auto mt-12 text-center lg:mt-20" data-aos="fade-up" data-aos-delay="200">
-            <img src={team} className='w-5/12 mx-auto pb-8' alt="wenGood" data-aos="fade-up" data-aos-delay="500"/>
+          <div className="max-w-8/12 mt-32 mx-auto mt-12 text-center md:mt-16 lg:mt-28" data-aos="fade-up" data-aos-delay="200">
+            <img src={team} className='w-8/12 md:w-7/12 lg:w-6/12 mx-auto pb-8' alt="wenGood" data-aos="fade-up" data-aos-delay="500"/>
             <h2 className="h2 font-normal text-gray-100 mb-4">Votre équipe personnelle de recherche project web3</h2>
             <p className="text-xl text-gray-100">
               Wen good project est une entreprise spécialisée 

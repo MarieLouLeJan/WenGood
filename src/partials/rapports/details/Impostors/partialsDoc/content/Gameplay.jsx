@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from 'react';
 import gameplay from '../../../../../../images/rapports/impostors/impostors-gameplay.png'
 import impostors from '../../../../../../images/rapports/impostors/impostors-gameplay-1.png'
-import { BsTwitter, BsDiscord } from 'react-icons/bs'
-import { Link } from 'react-router-dom';
 import YoutubeEmbed from '../../../../../../utils/YoutubeEnbeded';
-import { AiFillYoutube } from 'react-icons/ai'
 
 
 
 function Gameplay() {
 
   return (
-    <div className='max-w-6xl mx-12 mt-16 md:mt-8 lg:mt-8'>
+    <div className='max-w-6xl mx-12 mt-16 md:mt-4 lg:mt-4'>
 
       <div className="text-gray-100 space-y-6">
         {/* Article section */}
 
         <div className="space-y-12 text-justify text-xl">
-          <img src={gameplay} alt="gameplay" className='w-3/6'/>
+          <img src={gameplay} alt="gameplay" className='lg:w-5/6 lg:mx-auto'/>
           <div className="space-y-12">
             <p className=''>
               IMPOSTORS est un jeu dans lequel des personages innocents doivent trouver les imposteurrs responsables de meurtres, tout en complétant des mini jeux dans la map, le rôle des imposteurs est de tuer tout le monde.
