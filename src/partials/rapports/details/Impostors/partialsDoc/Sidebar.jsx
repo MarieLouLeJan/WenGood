@@ -77,13 +77,13 @@ function Sidebar({
               {/* Docs nav */}
               <nav className="md:block">
                 <div className='flex justify-between md:block mx-4 pb-4'>
-                  <p className='text-center text-2xl text-blue-100 md:pb-16 lg:pb-16'>Impostors</p>
+                  <p className='text-center text-2xl text-blue-100 md:pb-16 lg:pb-8'>Impostors</p>
                   {sidebarOpen && (
                     <div className=''>
                       <VscChromeClose size={30} className="text-blue-100 sticky left-52" onClick={() => setSidebarOpen(false)}/>
                     </div>
                   )}
-                  </div>
+                </div>
                   
                   <ul className="text-lg text-gray-100">
                   {categories.map((cat, i) =>

@@ -92,7 +92,7 @@ function Header() {
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
-                      <Scroll.Link  activeClass="text-blue-100 underline underline-offset-8" to={elem} spy={true} smooth={true} ooffset={-200} duration={500} delay={100} className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2">
+                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-200} duration={500} delay={100}  className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2" activeClass="underline underline-offset-8 text-blue-100"> 
                         {elem}
                       </Scroll.Link>
                     </li>

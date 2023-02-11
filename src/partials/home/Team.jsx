@@ -31,7 +31,6 @@ function Team() {
     if(window.innerWidth > 1100) {
       let newShow = [ ...showDescr];
       newShow[i] = true;
-      console.log(window.innerWidth)
       setShowDescr(newShow)
     } else return;
 
@@ -47,12 +46,14 @@ function Team() {
 
   const toggleDesciptionMobile = (i) => {
     if(window.innerWidth < 1100) {
-      console.log(i)
       let newShow = [ ...showDescrM];
       newShow[i] = !newShow[i];
-      console.log(newShow)
       setShowDescrM(newShow)
-    } else return;
+    } else {
+      let newShow = [ ...showDescr];
+      newShow[show] = !newShow[show];
+      setShowDescr(newShow)
+    };
   }
 
   const team = [
@@ -129,24 +130,27 @@ function Team() {
 
                     <p className={`text-xl mx-auto text-blue-100`}>{name}</p>
 
-                    <div className={`text-sm text-blue-100 mx-auto ${
-                      (( showDescr[show] && window.innerWidth > 1100) 
-                      || (showDescrM[i] && window.innerWidth < 1100)) 
-                      && 'hidden'}`} >{position.toUpperCase()}</div>
-
-                    <a href={twitter} target="_blank" ><GrLinkedin className='mx-auto my-2 lg:hidden md:hidden' size={25}/></a>
-                    <AiOutlinePlus size={30} onClick={() => toggleDesciptionMobile(i)} className={`${(showDescrM[i] || showDescr[show]) && 'hidden'} mx-auto text-blue-100`} />
-
+                    <div className={`text-sm text-blue-100 mx-auto `} >
+                        {position.toUpperCase()}
+                    </div>
+                    <div className=''>  
+                    <a href={twitter} target="_blank" ><
+                      GrLinkedin className='mx-auto my-2 ' size={25}/>
+                    </a>
+                    <AiOutlinePlus size={30} onClick={() => toggleDesciptionMobile(i, show)} className={`${(showDescrM[i] || showDescr[show]) && 'hidden'} mx-auto text-blue-100`} />
+                    </div>
                   </div>
                   <div className={`flex flex-col text-center ${
                       (( !showDescr[show] && window.innerWidth > 1100) 
                       || (!showDescrM[i] && window.innerWidth < 1100)) 
                       && 'hidden'}`} >
-                    <div className={`text-base text-gray-100 mb-1 px-8`}>
+                    <div className={`text-base text-gray-100 mb-1 px-8 pt-4`}>
                       {description}
                     </div>
-                    <a href={twitter} target="_blank" ><GrLinkedin className='mx-auto hidden lg:flex' size={25}/></a>
-                    <AiOutlineMinus size={30} onClick={() => toggleDesciptionMobile(i)} className={`${!showDescrM[i] && 'hidden'} mx-auto lg:hidden md:hidden text-blue-100`} />
+                    <a href={twitter} className={`${!showDescrM[i] && 'hidden'} mx-auto lg:hidden md:hidden `}  target="_blank" >
+                      <GrLinkedin className='mx-auto hidden lg:flex' size={25}/>
+                    </a>
+                    <AiOutlineMinus className={`mx-auto text-blue-100 ${!showDescrM[i] && 'hidden'}`} size={30} onClick={() => toggleDesciptionMobile(i)} />
 
                   </div>
                 </div>

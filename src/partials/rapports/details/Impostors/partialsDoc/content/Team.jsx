@@ -1,77 +1,91 @@
 import React from 'react';
-import impostors1 from '../../../../../../images/rapports/impostors/impostors1.png'
-import { BsTwitter, BsDiscord } from 'react-icons/bs'
-import { BiWorld } from 'react-icons/bi'
-import { Link } from 'react-router-dom';
-import { AiFillMediumSquare } from 'react-icons/ai'
+import EWainman from '../../../../../../images/rapports/impostors/team-ellio-wainman.png'
+import MCaplan from '../../../../../../images/rapports/impostors/team-marty-caplan.png'
+import TClancy from '../../../../../../images/rapports/impostors/team-tim-clancy.png'
+import DPrate from '../../../../../../images/rapports/impostors/team-daniel-prate.png'
+
+import { GrLinkedin } from 'react-icons/gr';
 
 
 function Team() {
+
+  const team = [
+    {
+      img: EWainman,
+      name: 'Elliot Wainman',
+      position: 'Co-fondateur Superfarm - Co-fondateur & CEO Super Studio',
+      description: `Elliot un influencer bien connu de l’écosystème web3, avec une base de plus de 1,2 million d’abonnés sur YouTube & Twitter. Avant de se consacrer à SuperFarm, il a co-fondé DApp Evolution, un écosystème de dApps construit sur Tron, ainsi que son produit phare TronChat, une dApp de médias sociaux. DApp Evolution et TronChat n'ont pas reçu le succès escompté, mais cela démontre et renforce la présence d’Elliot dans le milieu, et ca depuis 2018.`,
+      show: 1,
+      twitter: 'https://www.linkedin.com/in/elliot-wainman-67451484/'
+    },
+    {
+      img: TClancy,
+      name: 'Team Clancy',
+      position: 'Lead Developper chez SuperFarm',
+      description: `Tim a débutté très tôt dans le monde du web3 (Ethereum, NFT & gaming). Avant SuperFarm, Tim a co-fondé VINCI VR, une plateforme de formation en réalité virtuelle. Il a 8 ans d'expérience en développement de logiciels, y compris des stages de 4 mois chez Amazon Robotics et EA.`,
+      show: 1,
+      twitter: 'https://www.linkedin.com/in/tim-clancy/'
+    },
+    {
+      img: MCaplan,
+      name: 'Marty Capla,',
+      position: 'Chef du secteur de jeux blockchain chez Amber',
+      description: `Avec Amber, Marty a aidé à intégrer de nombreux développeurs jeux vidéos à l'équipe Impostors. Il a 20 ans d'expérience dans l'industrie du jeu et a livré de nombreux titres. Avant Amber, il a travaillé chez SEGA (producteur), EA (producteur), Playstudios (producteur senior), Zynga (producteur senior) et plus encore.`,
+      show: 1,
+      twitter: 'https://www.linkedin.com/in/martinhuntercaplan/'
+    },
+    {
+      img: DPrate,
+      name: 'Daniel Prat',
+      position: 'Directeur de jeu à Amber',
+      description: `Vétéran de l'industrie du jeu de plus de 10 ans. Il a travaillé pour JumpStart Games pendant 8 ans à différents postes, du développeur de jeux jusqu'au directeur de production. JumpStart Games est la société derrière NeoPets, un site d’animaux virtuels qui a eu des dizaines de millions d'utilisateurs au début des années 2000.`,
+      show: 2,
+      twitter: 'https://www.linkedin.com/in/daniel-prate-3b347391/'
+    },
+  ]
+
   return (
-    <div>
-      
-      {/* <p className="text-5xl text-gray-100 mb-4">Impostors</p> */}
+    <div className='max-w-6xl mx-12 mt-16 md:mt-8 lg:mt-8 '>
 
-      <header className="mb-12">
-        <div className='flex flex-col items-center'>
-          <img width="535" height="1095" src={impostors1} alt="impostors"/>
+      <div className="text-gray-100 space-y-6">
+
+
+        <div className="text-gray-100 text-justify text-xl mx-auto ">
+
+            <p className='md:leading-7 lg:leading-9'>
+              Certains des 30 membres de l'équipe sont doxxés. Cette équipe d'ingénieurs et de builders a de l'expérience dans ce domaine car certains de ses membres ont travaillé dans des studios AAA tels qu'<b className='text-blue-100'>Epic Games, Roblox, Pixar</b> et d’autres. L'équipe de SuperFarm utilise les services d’un studio de jeux vidéos appelé <b className='text-blue-100'>Amber Studio</b> pour aider à développer IMPOSTORS.
+            </p>
+
         </div>
-      </header>
 
-      <div className='flex w-full mx-auto space-x-8'>
-        <div className="basis-1/2 text-lg text-gray-100 my-auto">
-          <div className='flex flex-end space-x-2 mb-8 justify-end'>
-            <Link to='https://impostors.gg/'>
-              <BiWorld size={30} className="text-blue-100" />
-            </Link>
-            <Link to='https://twitter.com/PlayImpostors'>
-              <BsTwitter size={30} className="text-blue-100" />
-            </Link>
-            <Link to='https://discord.com/invite/impostors'>
-              <BsDiscord size={30} className="text-blue-100" />
-            </Link>
-            <Link to='https://medium.com/@impostors'>
-              <AiFillMediumSquare size={30} className="text-blue-100" />
-            </Link>
+
+        <div className="flex flex-wrap" data-aos-id-team>
+              
+              { team.map((p, i) => {
+                const { img, name, position, description, show, twitter } = p;
+                return (
+                  <div key={i} className={`py-4 sm:py-8 sm:px-3 w-6/12`} data-aos="fade-up" data-aos-anchor="[data-aos-id-team]">
+                    
+                    <img className='rounded-full mb-4 mx-auto border-solid border-2 border-blue-100' src={img} width="200" height="200" alt={name}  />
+                    <div className={`flex flex-col space-y-4 text-justify `} >
+
+                      <p className={`text-xl mx-auto text-blue-100`}>{name}</p>
+
+                      <div className={`text-sm text-blue-100 mx-auto text-center`} >{position.toUpperCase()}</div>
+
+                      <a href={twitter} target="_blank" ><GrLinkedin className='mx-auto hidden lg:flex' size={25}/></a>
+
+
+                      <p className='text-xl text-gray-100 mb-1 px-8 text-center'>{description}</p>
+
+                    </div>
+
+                  </div>
+                )
+              })}
+
           </div>
-          <p className='text-right lg:leading-9 md:leading-p'>
-            Un jeu de détection sociale comme Among Us, mais avec une qualité graphique AAA et des mécanismes de P&E. C'est le premier jeu dans un métaverre de jeux sociaux qui aura également des mini-jeux tels que la course d'OVNIS, la bataille d’animaux et les modes de jeu créés par les utilisateurs. Imposteurs est un mystère meurtrier PvP où les Innocents doivent trouver les Imposteurs tout en terminant des mini-jeux sur la carte, et le but des Imposteurs est de tuer tout le monde. Chaque salle d'attente peut accueillir jusqu'à 15 personnes.
-          </p>
         </div>
-        <div className="basis-1/2 text-lg text-gray-100 my-auto">
-          <p className='text-blue-100 mt-4'>
-            GENRE DU JEU
-          </p>
-          <p>
-            Play & Earn / JcJ (joueur contre joueur) social gaming metaverse construit sur Unreal Engine
-          </p>
-          <p className='text-blue-100 mt-4'>
-            PHASE DE DEVELOPPEMENT
-          </p>
-          <p>
-            Bêta privée
-          </p>
-          <p className='text-blue-100 mt-4'>
-            BLOCKCHAIN
-          </p>
-          <p>
-            Ethereum
-          </p>
-          <p className='text-blue-100 mt-4'>
-            PLATFORM
-          </p>
-          <p>
-            PC, macOS (via Epic Games); le supports pour téléphone mobile est planifié.
-          </p>
-          <p className='text-blue-100 mt-4'>
-            TARGET AUDIENCE
-          </p>
-          <p>
-            Gameurs et gameuse de tout âges, jeunes et adultes.
-          </p>
-          
-        </div>
-      </div>
 
     </div>
   );

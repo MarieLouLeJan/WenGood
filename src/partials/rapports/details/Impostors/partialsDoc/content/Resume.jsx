@@ -1,6 +1,6 @@
 import React from 'react';
 import impostors from '../../../../../../images/rapports/impostors/resume.png';
-import jauge from '../../../../../../images/rapports/impostors/impostors-jauge.png'
+import jauge from '../../../../../../images/rapports/impostors/jauge.png'
 import { BsTwitter, BsDiscord } from 'react-icons/bs'
 import { BiWorld } from 'react-icons/bi'
 import { Link } from 'react-router-dom';
@@ -20,9 +20,14 @@ function Resume() {
         </div>
       </header>
 
-      <div className='flex w-full mx-auto space-x-8'>
+      <div className='flex w-full  lg:w-10/12 mx-auto space-x-8'>
+        <div className="basis-1/2 text-xl md:text-2xl lg:text-2xl text-gray-100 my-auto">
+          <p className='text-right lg:leading-7 md:leading-7'>
+            Un jeu de détection sociale comme Among Us, mais avec une qualité graphique AAA et des mécanismes de P&E. C'est le premier metaverse de jeux sociaux qui aura également des mini-jeux tels que la course d'OVNIS, la bataille d’animaux et les modes de jeu créés par les utilisateurs. Impostors est un mystère meurtrier PvP où les Innocents doivent trouver les Impostors tout en terminant des mini-jeux sur la carte. Le but des Imposteurs est de tuer tout le monde. Chaque salle d'attente peut accueillir jusqu'à 15 personnes.
+          </p>
+        </div>
         <div className="basis-1/2 text-lg text-gray-100 my-auto">
-          <div className='flex flex-end space-x-2 mb-8 justify-end'>
+        <div className='flex flex-end space-x-2 mb-4'>
             <Link to='https://impostors.gg/'>
               <BiWorld size={30} className="text-blue-100" />
             </Link>
@@ -36,11 +41,6 @@ function Resume() {
               <AiFillMediumSquare size={30} className="text-blue-100" />
             </Link>
           </div>
-          <p className='text-right lg:leading-9 md:leading-p'>
-            Un jeu de détection sociale comme Among Us, mais avec une qualité graphique AAA et des mécanismes de P&E. C'est le premier jeu dans un métaverre de jeux sociaux qui aura également des mini-jeux tels que la course d'OVNIS, la bataille d’animaux et les modes de jeu créés par les utilisateurs. Imposteurs est un mystère meurtrier PvP où les Innocents doivent trouver les Imposteurs tout en terminant des mini-jeux sur la carte, et le but des Imposteurs est de tuer tout le monde. Chaque salle d'attente peut accueillir jusqu'à 15 personnes.
-          </p>
-        </div>
-        <div className="basis-1/2 text-lg text-gray-100 my-auto">
           <p className='text-blue-100 mt-4'>
             GENRE DU JEU
           </p>
@@ -60,13 +60,13 @@ function Resume() {
             Ethereum
           </p>
           <p className='text-blue-100 mt-4'>
-            PLATFORM
+            PLATFORME
           </p>
           <p>
             PC, macOS (via Epic Games); le supports pour téléphone mobile est planifié.
           </p>
           <p className='text-blue-100 mt-4'>
-            TARGET AUDIENCE
+            AUDIENCE CIBLE
           </p>
           <p>
             Gameurs et gameuse de tout âges, jeunes et adultes.

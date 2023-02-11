@@ -9,7 +9,7 @@ const YoutubeEnbeded = ({ embedId, width, height }) => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         title="Embedded youtube"
-        className='w-3/4 aspect-video mx-auto pt-8' 
+        className='w-3/4 aspect-video mx-auto' 
       />
     </div>
   )
