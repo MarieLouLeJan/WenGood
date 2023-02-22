@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import Sidebar from './partialsDoc/Sidebar';
 import MenuButton from './partialsDoc/MenuButton';
 import Resume from './partialsDoc/content/Resume';
-import Feedback from './partialsDoc/Feedback';
 import PageNavigation from './partialsDoc/PageNavigation';
-import SecondaryNav from './partialsDoc/DocumentationNav';
 import Marketing from './partialsDoc/content/Marketing';
 import Gameplay from './partialsDoc/content/Gameplay';
 import Tokenomics from './partialsDoc/content/Tokenomics';
@@ -15,6 +13,7 @@ import LeveFond from './partialsDoc/content/LeveFond';
 import Concurrence from './partialsDoc/content/Concurrence';
 import Analyse from './partialsDoc/content/Analyse';
 import { useRef } from 'react';
+import Footer from '../../../Footer';
 
 
 function DocumentationRapport() {
@@ -54,10 +53,9 @@ function DocumentationRapport() {
   })
 
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200">
+    <div className="flex flex-col min-h-screen overflow-hidden bg-bg-200">
 
-      {/*  Page content */}
-      <main className="grow">
+      <main className="grow ">
         <section className="">
 
           <div className="max-w-8xl mx-auto px-4 sm:px-6">
@@ -72,7 +70,7 @@ function DocumentationRapport() {
                     <div className="min-w-0">
 
                       {/* Mobile hamburger + breadcrumbs */}
-                      <div className="md:hidden flex fixed items-center py-4 w-11/12  bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200">
+                      <div className="md:hidden flex fixed items-center py-4 w-11/12  bg-bg-200">
                         {/* Hamburger button */}
                         <MenuButton sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
                         {/* Breadcrumbs */}
@@ -96,16 +94,11 @@ function DocumentationRapport() {
                     </div>
 
                   </article>
-
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </section>
-
       </main>
 
     </div>

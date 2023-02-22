@@ -21,19 +21,16 @@ function PageNavigation({
   }
 
   return (
-    <div className="sm:flex items-center justify-between pt-16 space-y-6 sm:space-y-0 sm:space-x-4">
-      {/* Prev link */}
-      {prev &&
-        <button className="sm:w-1/2 sm:flex space-x-2 items-center items-start" onClick={() => handlePrev(prev)}>
-          <div className='my-auto'>
+    <div className="flex items-center justify-between space-y-0 sm:space-x-4 content-between">
+        <button className="flex items-center justify-between pt-16 space-x-4" onClick={() => handlePrev(prev)}>
+          <div className={`${!prev && 'hidden'}`}>
             <AiOutlineArrowLeft size={30} className='text-blue-100'/>
           </div>
-          <span className='my-auto hover:text-blue-100'>{prev}</span>
+          <span className=' hover:text-blue-100'>{prev}</span>
         </button>
-      }
       {/* Next link */}
       {next &&
-        <button className="sm:w-1/2 sm:flex flex flex-row space-x-2 items-center ml-auto justify-end" onClick={() => handleNext(next)}>
+        <button className="flex items-center justify-between pt-16 space-x-4" onClick={() => handleNext(next)}>
           <span className='my-auto hover:text-blue-100'>{next}</span>
           <div className='my-auto'>
             <AiOutlineArrowRight size={30} className='text-blue-100'/>

@@ -1,4 +1,4 @@
-import plugins from '@tailwindcss/forms'
+import plugins from '@tailwindcss/forms';
 
 export default {
   content: [
@@ -31,9 +31,12 @@ export default {
           200: '#64D2E4',
           100: '#64D2E4'
         },
-        // black: {
-        //   100: 
-        // }
+        pet: {
+          1: '#E0CAA1',
+          2: '#8F6C84',
+          3: '#DA72F7',
+          4: '#7EC0A9'
+        }
       },
       spacing: {
         '9/16': '56.25%',

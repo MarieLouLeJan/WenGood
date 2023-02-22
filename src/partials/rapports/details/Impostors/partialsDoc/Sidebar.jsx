@@ -18,7 +18,7 @@ function Sidebar({
   const handleCLick = (cat) => {
     if(sidebarOpen) setSidebarOpen(false)
     setTitle(cat)
-    scroll.scrollToTop()
+    scroll.scrollToTop({duration: 300})
   };
 
   const sidebar = useRef(null);
@@ -63,7 +63,7 @@ function Sidebar({
           show={sidebarOpen}
           tag="aside"
           id="sidebar"
-          className="fixed left-0 top-48 bottom-0 w-64 bg-gradient-to-r from-bg-200 to-bg-100 h-screen border-r border-t rounded-2xl border-blue-100 md:left-auto md:shrink-0 z-10 md:!opacity-100 md:!block"
+          className="fixed left-0 top-48 bottom-0 w-64 h-screen bg-bg-200 border-r border-t rounded-2xl border-blue-100 md:left-auto md:shrink-0 z-10 md:!opacity-100 md:!block"
           enter="transition ease-out duration-200 transform"
           enterStart="opacity-0 -translate-x-full"
           enterEnd="opacity-100 translate-x-0"
@@ -85,7 +85,7 @@ function Sidebar({
                   )}
                 </div>
                   
-                  <ul className="text-lg text-gray-100">
+                  <ul className="text-lg ">
                   {categories.map((cat, i) =>
                     (
                       <li key={i}>

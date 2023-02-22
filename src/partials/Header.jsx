@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../images/wenGood/logo.png';
-import Scroll from 'react-scroll'
+import Scroll from 'react-scroll';
+import ConnectWallet from './ConnectWallet';
 
 
 function Header() {
@@ -30,26 +31,25 @@ function Header() {
     if (location.pathname === '/') {
       return (
         <Scroll.Link className="flex hover:cursor-pointer" to='wengood' spy={true} smooth={true} offset={-200} duration={500} delay={100} >
-          <img src={logo} className='w-20 h-22' alt="wengood" />
+          <img src={logo} className='w-14 h-16' alt="wengood" />
           <div className='my-auto text-center'>
-            <h4 className='h4 text-base tracking-widest'>WEN GOOD </h4>
+            <h4 className='h4 text-sm tracking-widest'>WEN GOOD </h4>
             <h3 className='h4 text-xs tracking-widest'>PROJECT</h3>
           </div>
         </Scroll.Link>
       )
-    } else if (location.pathname.includes('/rapports')) {
+    } else if (!location.pathname !== '/') {
       return (
         <Link to="/" className="flex hover:cursor-pointer ">
-          <img src={logo} className='w-20 h-22' alt="wengood" />
+          <img src={logo} className='w-14 h-16' alt="wengood" />
           <div className='my-auto text-center'>
-            <h4 className='h4 text-base tracking-widest'>WEN GOOD </h4>
+            <h4 className='h4 text-sm tracking-widest'>WEN GOOD </h4>
             <h3 className='h4 text-xs tracking-widest'>PROJECT</h3>
           </div>
         </Link>
       )
     }
   }
-
 
   // close the mobile menu on click outside
   useEffect(() => {
@@ -73,13 +73,11 @@ function Header() {
   });
 
   return (
-    <header className="w-full z-30 fixed bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200">
-      <div className=" max-w-8xl mx-auto pb:1 pt-3 md:py-8 lg:py-8 px-4 sm:px-6">
+    <header className="w-full z-30 fixed bg-bg-200"  data-aos="fade-up">
+      <div className=" max-w-8xl mx-auto pb:1 py-6 md:py-8 lg:py-8 px-4 sm:px-6">
         <div className="max-w-full flex items-center justify-between h-20">
 
-          {/* Site branding */}
           <div className="shrink-0 mr-4">
-            {/* Logo */}
             {logoLocation()}
           </div>
 
@@ -92,7 +90,7 @@ function Header() {
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
-                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-200} duration={500} delay={100}  className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2" activeClass="underline underline-offset-8 text-blue-100"> 
+                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-200} duration={500} delay={100}  className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2" activeClass="underline underline-offset-8 text-blue-200"> 
                         {elem}
                       </Scroll.Link>
                     </li>
@@ -105,25 +103,28 @@ function Header() {
             ) }
 
             {/* Rapport menu links */}
-            { location.pathname.includes('/rapports') && (
+            { location.pathname !== '/' && (
               <ul className="flex grow justify-end flex-wrap items-center">
-                <li>
-                  <Link to="/" className=" text-xl text-gray-100 hover:text-blue-100 px-4 py-2 flex items-center transition duratioease-in-out">Home</Link>
-                </li>
+                { navHome.map((elem, i) => {
+                  return (
+                    <li key={i}>
+                      <Link to='/' className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2"> 
+                        {elem}
+                      </Link>
+                    </li>
+                  )
+                })}
                 <li>
                   <Link to='/rapports'className={`hover:cursor-pointer hover:text-blue-100 lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2 ${location.pathname === '/rapports' && 'text-blue-100 underline underline-offset-8'} `}>
                         Rapports
                   </Link>
                  </li>
               </ul>
-
             ) }
 
-
-            {/* Desktop connect wallet button*/}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link to="/signup" className="h4 text-lg btn-sm text-gray-900 bg-blue-100 hover:bg-bg-200 hover:text-blue-100 ml-3 rounded-full">Connect wallet</Link>
+                <ConnectWallet/>
               </li>
             </ul>
 
@@ -143,24 +144,48 @@ function Header() {
             </button>
 
             {/*Mobile navigation */}
-            <nav id="mobile-nav" ref={mobileNav} className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" style={mobileNavOpen ? { maxHeight: mobileNav.current.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: .8 } }>
-              <ul className="bg-gray-800 px-4 py-2">
+            <nav id="mobile-nav" ref={mobileNav} className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out " style={mobileNavOpen ? { maxHeight: mobileNav.current.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: .8 } }>
+              { location.pathname === '/' && (
+              <ul className="bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200 px-4 py-4">
+                { navHome.map((elem, i) => {
+                  return (
+                    <li key={i}>
+                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-200} duration={500} delay={100}  className="hover:text-blue-100 hover:cursor-pointer text-xl" activeClass="underline underline-offset-8 text-blue-100"> 
+                        {elem}
+                      </Scroll.Link>
+                    </li>
+                  )
+                })}
                 <li>
-                  <Link to="/features" className="flex text-gray-300 hover:text-gray-200 py-2">Features</Link>
+                  <Link to="/rapports" className="text-xl hover:text-blue-100">Rapports</Link>
                 </li>
                 <li>
-                  <Link to="/pricing" className="flex text-gray-300 hover:text-gray-200 py-2">Pricing</Link>
-                </li>
-                <li>
-                  <Link to="/blog" className="flex text-gray-300 hover:text-gray-200 py-2">Blog</Link>
-                </li>
-                <li>
-                  <Link to="/about" className="flex text-gray-300 hover:text-gray-200 py-2">About us</Link>
-                </li>
-                <li>
-                  <Link to="/signup" className="font-medium w-full inline-flex items-center justify-center border border-transparent px-4 py-2 my-2 rounded-sm text-white bg-purple-600 hover:bg-purple-700 transition duration-150 ease-in-out">Sign up</Link>
+                  <ConnectWallet/>
                 </li>
               </ul>
+            ) }
+
+            { location.pathname.includes('/rapports') && (
+              <ul className="bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200 px-4 py-4">
+                { navHome.map((elem, i) => {
+                  return (
+                    <li key={i}>
+                      <Link to='/' className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2"> 
+                        {elem}
+                      </Link>
+                    </li>
+                  )
+                })}
+                <li>
+                  <Link to='/rapports'className={`hover:cursor-pointer hover:text-blue-100 lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2 ${location.pathname === '/rapports' && 'text-blue-100 underline underline-offset-8'} `}>
+                        Rapports
+                  </Link>
+                 </li>
+                 <li>
+                  <ConnectWallet />
+                </li>
+              </ul>
+            ) }
             </nav>
           </div>
         </div>
