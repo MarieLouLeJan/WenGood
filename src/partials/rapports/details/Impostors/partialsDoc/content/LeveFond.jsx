@@ -1,7 +1,4 @@
-import fond1 from '../../../../../../images/rapports/impostors/fond1.png'
-import fond2 from '../../../../../../images/rapports/impostors/fond2.png'
-import fond3 from '../../../../../../images/rapports/impostors/fond3.png'
-import fond4 from '../../../../../../images/rapports/impostors/fond4.png'
+
 import fonds from '../../../../../../images/rapports/impostors/fonds.png'
 
 
@@ -10,7 +7,6 @@ function LeveFond() {
     <div className='max-w-6xl mx-12 mt-24 md:mt-16 md:mt-8 lg:mt-8'>
 
       <div className="">
-        {/* Article section */}
 
         <div className='lg:w-4/6 mx-auto'>
           <img src={fonds} alt="levé de fond" />

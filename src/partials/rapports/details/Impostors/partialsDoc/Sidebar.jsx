@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import Transition from '../../../../../utils/TransitionDoc';
 import Scroll from 'react-scroll'
 
@@ -24,15 +24,15 @@ function Sidebar({
   const sidebar = useRef(null);
 
   // close on click outside
-  // useEffect(() => {
-  //   const clickHandler = ({ target }) => {
-  //     if (!sidebar.current) return;
-  //     if (!sidebarOpen || sidebar.current.contains(target)) return;
-  //     setSidebarOpen(false);
-  //   };
-  //   document.addEventListener('click', clickHandler);
-  //   return () => document.removeEventListener('click', clickHandler);
-  // });
+  useEffect(() => {
+    const clickHandler = ({ target }) => {
+      if (!sidebar.current) return;
+      if (!sidebarOpen || sidebar.current.contains(target)) return;
+      setSidebarOpen(false);
+    };
+    document.addEventListener('click', clickHandler);
+    return () => document.removeEventListener('click', clickHandler);
+  });
 
   // close if the esc key is pressed
   // useEffect(() => {

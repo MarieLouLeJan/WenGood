@@ -1,4 +1,3 @@
-import React from 'react';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import Scroll from 'react-scroll'
 
@@ -28,7 +27,7 @@ function PageNavigation({
           </div>
           <span className=' hover:text-blue-100'>{prev}</span>
         </button>
-      {/* Next link */}
+
       {next &&
         <button className="flex items-center justify-between pt-16 space-x-4" onClick={() => handleNext(next)}>
           <span className='my-auto hover:text-blue-100'>{next}</span>

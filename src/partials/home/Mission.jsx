@@ -1,7 +1,7 @@
 import React from 'react';
-import expertise from '../../images/mission/expertise1.png'
-import commu from '../../images/mission/commu.png'
-import apprentissage from '../../images/mission/apprentissage.png'
+import expertise from '../../images/wenGood//mission/expertise1.png'
+import commu from '../../images/wenGood//mission/commu.png'
+import apprentissage from '../../images/wenGood//mission/apprentissage.png'
 
 function Mission() {
   return (

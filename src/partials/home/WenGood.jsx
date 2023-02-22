@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import team from '../../images/wenGood/team_landing.png'
 
-function HeroHome() {
+function wenGood() {
 
   return (
     <section className='bg-back-bg'>
@@ -24,5 +23,5 @@ function HeroHome() {
   );
 }
 
-export default HeroHome;
+export default wenGood;
 

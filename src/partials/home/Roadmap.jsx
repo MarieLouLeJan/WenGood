@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import roadmap from '../../images/roadmap/roadmap.png'
+import roadmap from '../../images/wenGood/roadmap.png'
 
 function Roadmap() {
 
@@ -8,7 +8,7 @@ function Roadmap() {
   const tabs = useRef(null);
 
   return (
-    <section className='mb-8'>
+    <section className='mb-8' data-aos="fade-up">
 
       <div className="max-w-6xl mx-auto py-8 px-4 sm:px-6">
 

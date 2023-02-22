@@ -13,7 +13,6 @@ import LeveFond from './partialsDoc/content/LeveFond';
 import Concurrence from './partialsDoc/content/Concurrence';
 import Analyse from './partialsDoc/content/Analyse';
 import { useRef } from 'react';
-import Footer from '../../../Footer';
 
 
 function DocumentationRapport() {

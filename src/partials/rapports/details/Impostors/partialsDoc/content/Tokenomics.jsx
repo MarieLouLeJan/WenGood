@@ -5,13 +5,14 @@ import phase2 from '../../../../../../images/rapports/impostors/pet-phase2.png'
 import phase3 from '../../../../../../images/rapports/impostors/pet-phase3.png'
 import phase4 from '../../../../../../images/rapports/impostors/pet-phase4.png'
 import roadmapUFO from '../../../../../../images/rapports/impostors/roadmapUFO.png'
+import roadmapUFO2 from '../../../../../../images/rapports/impostors/roadmapUFO2.png'
 
 function Tokenomics() {
 
   return (
-    <div className='max-w-6xl mx-12 mt-24 md:mt-16 md:mt-8 lg:mt-8'>
+    <div className='max-w-8xl mt-24 md:mt-16 md:mt-8 lg:mt-8'>
 
-          <div className="lg:space-x-8 text-xl flex flex-col lg:flex-row mb-20">
+          <div className="lg:space-x-8 mx-12 text-xl flex flex-col lg:flex-row mb-20">
 
             <ul className='basis-1/2 space-y-8 lg:space-y-16 my-auto'>
 
@@ -83,7 +84,7 @@ function Tokenomics() {
             </ul>
           </div>
 
-          <div className="lg:space-x-8 space-y-8 text-xl mb-20 w-9/12">
+          <div className="lg:space-x-8 mx-12 space-y-8 text-xl mb-20 w-9/12">
 
             <h2 className='text-3xl text-blue-100 text-center'>Roadmap - Pets</h2>
 
@@ -145,9 +146,10 @@ function Tokenomics() {
             </div>
           </div>
 
-          <div>
+          <div className='space-y-8'>
             <h2 className='text-3xl text-blue-100 text-center'>Roadmap - UFOs</h2>
-            <img src={roadmapUFO} alt="roadmap ufo" />
+            <img src={roadmapUFO} alt="roadmap ufo" className='md:hidden'/>
+            <img src={roadmapUFO2} alt="roadmap ufo" className='hidden md:flex'/>
           </div>
     </div>
   );

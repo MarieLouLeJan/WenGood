@@ -21,7 +21,7 @@ function Roadmap() {
     </div>
 
 
-    <div className='w-full mt-16 md:mt-8 lg:mt-8'>
+    <div className='w-full mt-16 md:mt-8'>
       <div className='max-w-11/12 hidden md:hidden lg:flex mx-4'>
         <img src={roadmap} alt="roadmap" />
       </div>

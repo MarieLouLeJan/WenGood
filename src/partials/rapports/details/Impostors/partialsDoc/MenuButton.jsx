@@ -1,5 +1,3 @@
-import React from 'react';
-
 function MenuButton({ sidebarOpen, setSidebarOpen }) {
   return (
     <button

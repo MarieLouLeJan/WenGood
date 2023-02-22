@@ -62,15 +62,6 @@ function Header() {
     return () => document.removeEventListener('click', clickHandler);
   });
 
-  // close the mobile menu if the esc key is pressed
-  useEffect(() => {
-    const keyHandler = ({ keyCode }) => {
-      if (!mobileNavOpen || keyCode !== 27) return;
-      setMobileNavOpen(false);
-    };
-    document.addEventListener('keydown', keyHandler);
-    return () => document.removeEventListener('keydown', keyHandler);
-  });
 
   return (
     <header className="w-full z-30 fixed bg-bg-200"  data-aos="fade-up">
@@ -136,7 +127,7 @@ function Header() {
             {/* Hamburger button */}
             <button ref={trigger} className={`hamburger ${mobileNavOpen && 'active'}`} aria-controls="mobile-nav" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
               <span className="sr-only">Menu</span>
-              <svg className="w-6 h-6 fill-current text-gray-300 hover:text-gray-200 transition duration-150 ease-in-out" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-6 h-6 fill-current text-gray-300 hover:text-gray-200 transition duration-150 ease-in-out text-blue-100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <rect y="4" width="24" height="2" rx="1" />
                 <rect y="11" width="24" height="2" rx="1" />
                 <rect y="18" width="24" height="2" rx="1" />
@@ -146,7 +137,7 @@ function Header() {
             {/*Mobile navigation */}
             <nav id="mobile-nav" ref={mobileNav} className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out " style={mobileNavOpen ? { maxHeight: mobileNav.current.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: .8 } }>
               { location.pathname === '/' && (
-              <ul className="bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200 px-4 py-4">
+              <ul className="bg-bg-200 px-4 py-4 text-center">
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
@@ -166,7 +157,7 @@ function Header() {
             ) }
 
             { location.pathname.includes('/rapports') && (
-              <ul className="bg-gradient-to-r from-bg-200 via-bg-100 to-bg-200 px-4 py-4">
+              <ul className="bg-bg-200 px-4 py-4 text-center">
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import AChevaugeon from '../../images/team/Team-AChevaugeon.png';
-import BSoucy from '../../images/team/Team-BSoucy.png';
-import JRMabille from '../../images/team/Team-JRMabille.png';
-import KWon from '../../images/team/Team-KWon.png';
-import Lourimax from '../../images/team/Team-Lourimax.png';
-import MBouchard from '../../images/team/Team-MBouchard.png';
+import AChevaugeon from '../../images/wenGood/team/Team-AChevaugeon.png';
+import BSoucy from '../../images/wenGood/team/Team-BSoucy.png';
+import JRMabille from '../../images/wenGood/team/Team-JRMabille.png';
+import KWon from '../../images/wenGood/team/Team-KWon.png';
+import Lourimax from '../../images/wenGood/team/Team-Lourimax.png';
+import MBouchard from '../../images/wenGood/team/Team-MBouchard.png';
 import { GrLinkedin } from 'react-icons/gr'
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
