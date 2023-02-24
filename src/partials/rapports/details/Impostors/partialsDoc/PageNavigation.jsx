@@ -20,17 +20,18 @@ function PageNavigation({
   }
 
   return (
-    <div className="flex items-center justify-between space-y-0 sm:space-x-4 content-between">
-        <button className="flex items-center justify-between pt-16 space-x-4" onClick={() => handlePrev(prev)}>
+    <div className="flex items-center justify-between space-y-0 sm:space-x-4 content-between text-sm md:text-base md:border-none mt-16">
+      
+        <button className={`flex items-center justify-between space-x-1 md:space-x-4 ${prev.length > 0 && 'border border-blue-100 rounded-lg'} py-1 px-2 md:border-none`} onClick={() => handlePrev(prev)}>
           <div className={`${!prev && 'hidden'}`}>
             <AiOutlineArrowLeft size={30} className='text-blue-100'/>
           </div>
-          <span className=' hover:text-blue-100'>{prev}</span>
+          <span className='md:hover:text-blue-100'>{prev}</span>
         </button>
 
       {next &&
-        <button className="flex items-center justify-between pt-16 space-x-4" onClick={() => handleNext(next)}>
-          <span className='my-auto hover:text-blue-100'>{next}</span>
+        <button className="flex items-center justify-between  space-x-1 md:space-x-4  border border-blue-100 rounded-lg py-1 px-2 md:border-none" onClick={() => handleNext(next)}>
+          <span className='my-auto md:hover:text-blue-100'>{next}</span>
           <div className='my-auto'>
             <AiOutlineArrowRight size={30} className='text-blue-100'/>
           </div>

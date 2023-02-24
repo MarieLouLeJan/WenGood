@@ -57,11 +57,11 @@ function DocumentationRapport() {
       <main className="grow ">
         <section className="">
 
-          <div className="max-w-8xl mx-auto px-4 sm:px-6">
+          <div className="max-w-8xl mx-auto px-2 md:px-4">
             <div>
               <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} title={title} setTitle={setTitle} categories={categories}/>
 
-              <div className="md:grow md:pl-64 lg:pr-6 xl:pr-0">
+              <div className="md:grow md:pl-64 lg:pr-6">
                 <div className=" md:pt-16 pb-8 md:pl-6 lg:pl-12">
 
                   <article className="flex xl:space-x-12">
@@ -69,7 +69,7 @@ function DocumentationRapport() {
                     <div className="min-w-0">
 
                       {/* Mobile hamburger + breadcrumbs */}
-                      <div className="md:hidden flex fixed items-center py-4 w-11/12  bg-bg-200">
+                      <div className="md:hidden flex fixed top-10 items-center pt-12 pb-4 w-11/12 bg-bg-200">
                         {/* Hamburger button */}
                         <MenuButton sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
                         {/* Breadcrumbs */}

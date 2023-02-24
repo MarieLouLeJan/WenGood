@@ -51,8 +51,8 @@ export default {
         titles: [ '"Unbounded", "cursive"' ]
       },
       screens: {
-        'sm': '800px',
-        'md': '1000px',
+        'sm': '500px',
+        'md': '920px',
         'lg': '1150px'
       },
       // screens: {

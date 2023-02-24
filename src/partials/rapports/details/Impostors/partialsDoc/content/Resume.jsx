@@ -9,24 +9,24 @@ import { AiFillMediumSquare } from 'react-icons/ai'
 
 function Resume() {
   return (
-    <div className='max-w-6xl mx-12 mt-24 md:mt-16 md:mt-0 lg:mt-0'>
+    <div className='max-w-8xl md:max-w-6xl mx-4 md:mx-12 mt-8 md:mt-0 text-lg md:text-xl'>
       
-      <header className="mb-12 mx-auto">
-        <div className='flex w-10/12 flex-col items-center mx-auto'>
+      <header className="mb-12 mx-auto" data-aos="fade-up" data-aos-delay="200">
+        <div className='flex md:w-10/12 flex-col items-center mx-auto'>
           <img src={impostors} alt="impostors"/>
         </div>
-        <div className='flex w-7/12 flex-col items-center mx-auto'>
+        <div className='flex w-10/12 md:w-7/12 flex-col items-center mx-auto'>
           <img src={jauge} alt="impostors-jauge"/>
         </div>
       </header>
 
-      <div className='flex flex-col md:flex-row lg:flex-row w-full lg:w-10/12 mx-auto lg:space-x-8 md:space-x-8'>
-        <div className="basis-1/2 text-xl my-auto">
-          <p className='lg:text-right md:text-right lg:leading-8 md:leading-7'>
+      <div className='flex flex-col md:flex-row w-full lg:w-10/12 mx-auto md:space-x-8'   data-aos="fade-up" data-aos-delay="400">
+        <div className="md:basis-1/2 my-auto">
+          <p className='md:text-right lg:leading-8 md:leading-7'>
           Un jeu d’investigation basé sur la coopération des joueurs  comme Among Us, mais avec une qualité graphique AAA et des mécanismes de P&E. C'est le premier metaverse de jeux sociaux qui aura également des mini-jeux tels que la course d'OVNIS, la bataille d’animaux et les modes de jeu créés par les utilisateurs. Impostors est une enquête  PvP où les Innocents doivent trouver les “Imposteurs” tout en terminant des mini-jeux sur la carte. Le but des Imposteurs est de tuer tout le monde. Chaque salle d'attente peut accueillir jusqu'à 15 personnes.
           </p>
         </div>
-        <div className="basis-1/2 mt-8 lg:mt-0 md:mt-0 text-lg my-auto">
+        <div className="md:basis-1/2 mt-8 lg:mt-0 md:mt-0 my-auto">
           <div className='flex flex-end space-x-2 mb-4'>
               <a target='_blank' href='https://impostors.gg/'>
                 <BiWorld size={30} className="text-blue-100" />

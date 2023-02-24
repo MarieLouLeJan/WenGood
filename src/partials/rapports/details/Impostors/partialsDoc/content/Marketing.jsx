@@ -7,24 +7,24 @@ import YoutubeEmbed from '../../../../../../utils/YoutubeEnbeded';
 function Marketing() {
 
   return (
-    <div className='max-w-6xl mx-12 mt-24 md:mt-16 md:mt-8 lg:mt-8'>
+    <div className='max-w-8xl md:max-w-6xl mx-4 md:mx-12 mt-8 md:mt-0 text-lg md:text-xl'>
 
       <div className="space-y-6">
 
-        <div className="space-y-6 text-xl">
-          <div className="space-y-6 md:space-y-0 md:space-x-8 flex flex-col md:flex-row">
+        <div className="space-y-6 text-lg md:text-xl">
+          <div className="space-y-6 md:space-y-0 md:space-x-8 flex flex-col md:flex-row"   data-aos="fade-up" data-aos-delay="200">
             <div className='basis-1/2 space-y-5'>
               <p>
                 Pour le moment, la majeure partie du marketing a été effectuée par le chef du projet, Elliot Wainman, qui est un des principaux influenceurs dans le domaine des jeux blockchain/NFT. Il est à l’avant-garde depuis 2018 et a rassemblé une communauté de plus de 1,2 million d’abonnés sur YouTube et Twitter confondus.
               </p>
-              <div className='flex space-x-4 items-center'>
-                <Link to='https://www.youtube.com/@elliotrades_official'><AiFillYoutube size={35} color={'red'}/></Link> 
-                <span className='font-semibold'>Youtube - 576K</span>
-              </div>
-              <div className='flex space-x-5 items-center'>
-                <Link to='https://www.youtube.com/@elliotrades_official'><BsTwitter size={30} className='text-blue-100'/></Link> 
-                <span className='font-semibold'>Twitter - 698.6K</span>
-              </div>
+                <Link className='flex flex-row space-x-4 items-center' to='https://www.youtube.com/@elliotrades_official'>
+                  <AiFillYoutube size={35} color={'red'}/>
+                  <span className='font-semibold'>Youtube - 576K</span>
+                </Link> 
+                <Link className='flex space-x-5 items-center' to='https://www.youtube.com/@elliotrades_official'>
+                  <BsTwitter size={30} className='text-blue-100'/>
+                  <span className='font-semibold'>Twitter - 698.6K</span>
+                </Link> 
               <p>
                 IMPOSTORS fait partie de l’écosystème SuperFarm et est commercialisé auprès de cette communauté, leur token $SUPER compte plus de 37 000 détenteurs répartis dans trois chaînes différentes - sans oublier la communauté EllioTrades sur discord qui compte environ 11 000 membres.  La communauté Impostors / Superfarm / EllioTrades est active sur Twitter et Discord.
               </p>
@@ -41,7 +41,7 @@ function Marketing() {
               </p>
             </div>
           </div>
-          <div className="pt-8 space-y-12">
+          <div className="pt-8 space-y-12" data-aos="fade-up" data-aos-delay="400">
             <YoutubeEmbed embedId="U2GAR8Xfuow"/>
             <p>
               On peut retrouver entre autres, la célèbre chaîne “Crypto Banter” et ses 600K abonnés ainsi que “CryptoStache” et ses 93k abonnés. Cela inclut des joueurs et des streamers avec un large public web2, ce qui présage une adoption de cet écosystème par des “normies” : les personnes ne connaissant pas ou très peu le monde de la blockchain. Le jeu prendra une approche saisonnière, donc chaque nouvelle saison devrait être lancée avec une nouvelle vague de marketing.

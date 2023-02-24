@@ -33,59 +33,59 @@ function Contact() {
         <section className="max-w-6xl mx-auto px-4 sm:px-6 relative">
             <div className="pt-32 pb-12 md:pt-44 md:pb-16">
 
-              <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-                <h1 className="h3 mb-4" data-aos="fade-up">Nous contacter</h1>
+              <div className="max-w-3xl mx-auto text-center pb-4 md:pb-8">
+                <h1 className="h4 mb-4" data-aos="fade-up">Nous contacter</h1>
               </div>
 
               <form className="max-w-xl mx-auto" ref={form} onSubmit={sendEmail}>
 
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3 mb-4 md:mb-0">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="first-name">Nom<span className="text-red-600">*</span></label>
+                    <label className="block text-base font-medium mb-1" htmlFor="first-name">Nom<span className="text-red-600">*</span></label>
                     <input 
                         type="text" 
                         name='user_name'
-                        className="form-input w-full text-gray-300 focus:border-blue-100" 
+                        className="form-input w-full focus:border-blue-100" 
                         required />
                   </div>
                 </div>
 
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Email <span className="text-red-600">*</span></label>
+                    <label className="block text-base font-medium mb-1" htmlFor="email">Email <span className="text-red-600">*</span></label>
                     <input 
                         type="email" 
                         name='user_email'
-                        className="form-input w-full text-gray-300 focus:border-blue-100" 
+                        className="form-input w-full focus:border-blue-100" 
                         required />
                   </div>
                 </div>
 
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="subject">Object <span className="text-red-600">*</span></label>
+                    <label className="block text-base font-medium mb-1" htmlFor="subject">Objet<span className="text-red-600">*</span></label>
                     <input 
                         type="text" 
                         name='topic'
-                        className="form-input w-full text-gray-300 focus:border-blue-100" 
+                        className="form-input w-full focus:border-blue-100" 
                         required />
                   </div>
                 </div>
 
                 <div className="flex flex-wrap -mx-3 mb-4">
                   <div className="w-full px-3">
-                    <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="message">Message <span className="text-red-600">*</span></label>
+                    <label className="block text-base font-medium mb-1" htmlFor="message">Message <span className="text-red-600">*</span></label>
                     <textarea 
                         name='message'
                         rows="4" 
-                        className="form-textarea w-full text-gray-300 focus:border-blue-100" 
+                        className="form-textarea w-full focus:border-blue-100" 
                         required></textarea>
                   </div>
                 </div>
 
                 <div className="flex flex-wrap -mx-3 mt-6">
                   <div className="w-full px-3">
-                    <button type='submit' className="btn text-bg-200 bg-blue-100 hover:bg-bg-200 hover:text-blue-100 w-full">Envoyer</button>
+                    <button type='submit' className="btn text-lg text-bg-200 bg-blue-100 hover:bg-bg-200 hover:text-blue-100 w-full">Envoyer</button>
                   </div>
                 </div>
 

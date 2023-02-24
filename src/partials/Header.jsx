@@ -38,7 +38,7 @@ function Header() {
           </div>
         </Scroll.Link>
       )
-    } else if (!location.pathname !== '/') {
+    } else if (location.pathname !== '/') {
       return (
         <Link to="/" className="flex hover:cursor-pointer ">
           <img src={logo} className='w-14 h-16' alt="wengood" />
@@ -65,8 +65,8 @@ function Header() {
 
   return (
     <header className="w-full z-30 fixed bg-bg-200"  data-aos="fade-up">
-      <div className=" max-w-8xl mx-auto pb:1 py-6 md:py-8 lg:py-8 px-4 sm:px-6">
-        <div className="max-w-full flex items-center justify-between h-20">
+      <div className="mx-auto pb:1 py-6 md:py-8 lg:py-8 px-4 sm:px-6">
+        <div className="flex items-center justify-between h-6 md:h-15 md:mr-6">
 
           <div className="shrink-0 mr-4">
             {logoLocation()}
@@ -81,14 +81,14 @@ function Header() {
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
-                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-200} duration={500} delay={100}  className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2" activeClass="underline underline-offset-8 text-blue-200"> 
+                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-120} duration={500} delay={100}  className="md:hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg  md:px-2" activeClass="underline underline-offset-8 text-blue-200"> 
                         {elem}
                       </Scroll.Link>
                     </li>
                   )
                 })}
                 <li>
-                  <Link to="/rapports" className="text-xl text-gray-100 hover:text-blue-100 px-4 py-2 flex items-center transition duratioease-in-out">Rapports</Link>
+                  <Link to="/rapports" className="text-lg md:hover:text-blue-100 px-4 py-2 flex items-center transition duratioease-in-out">Rapports</Link>
                 </li>
               </ul>
             ) }
@@ -99,14 +99,14 @@ function Header() {
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
-                      <Link to='/' className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2"> 
+                      <Link to='/' className="md:hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg md:px-2"> 
                         {elem}
                       </Link>
                     </li>
                   )
                 })}
                 <li>
-                  <Link to='/rapports'className={`hover:cursor-pointer hover:text-blue-100 lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2 ${location.pathname === '/rapports' && 'text-blue-100 underline underline-offset-8'} `}>
+                  <Link to='/rapports'className={`hover:cursor-pointer md:hover:text-blue-100 lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg md:px-2 ${location.pathname === '/rapports' && 'text-blue-100 underline underline-offset-8'} `}>
                         Rapports
                   </Link>
                  </li>
@@ -127,7 +127,7 @@ function Header() {
             {/* Hamburger button */}
             <button ref={trigger} className={`hamburger ${mobileNavOpen && 'active'}`} aria-controls="mobile-nav" aria-expanded={mobileNavOpen} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
               <span className="sr-only">Menu</span>
-              <svg className="w-6 h-6 fill-current text-gray-300 hover:text-gray-200 transition duration-150 ease-in-out text-blue-100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-6 h-6 fill-current text-gray-300 md:hover:text-gray-200 transition duration-150 ease-in-out text-blue-100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <rect y="4" width="24" height="2" rx="1" />
                 <rect y="11" width="24" height="2" rx="1" />
                 <rect y="18" width="24" height="2" rx="1" />
@@ -136,44 +136,45 @@ function Header() {
 
             {/*Mobile navigation */}
             <nav id="mobile-nav" ref={mobileNav} className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out " style={mobileNavOpen ? { maxHeight: mobileNav.current.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: .8 } }>
+
               { location.pathname === '/' && (
               <ul className="bg-bg-200 px-4 py-4 text-center">
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
-                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-200} duration={500} delay={100}  className="hover:text-blue-100 hover:cursor-pointer text-xl" activeClass="underline underline-offset-8 text-blue-100"> 
+                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-90} duration={700} delay={200}  className="md:hover:text-blue-100 hover:cursor-pointer text-lg" activeClass="underline underline-offset-8 text-blue-100" onClick={() => setMobileNavOpen(!mobileNavOpen)}> 
                         {elem}
                       </Scroll.Link>
                     </li>
                   )
                 })}
                 <li>
-                  <Link to="/rapports" className="text-xl hover:text-blue-100">Rapports</Link>
+                  <Link to="/rapports" className="text-lg md:hover:text-blue-100" onClick={() => setMobileNavOpen(!mobileNavOpen)}>Rapports</Link>
                 </li>
                 <li>
-                  <ConnectWallet/>
+                  <ConnectWallet onClick={() => setMobileNavOpen(!mobileNavOpen)}/>
                 </li>
               </ul>
             ) }
 
-            { location.pathname.includes('/rapports') && (
+            { location.pathname !== '/' && (
               <ul className="bg-bg-200 px-4 py-4 text-center">
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
-                      <Link to='/' className="text-gray-100 hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2"> 
+                      <Link to='/' className="md:hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg md:px-2"> 
                         {elem}
                       </Link>
                     </li>
                   )
                 })}
                 <li>
-                  <Link to='/rapports'className={`hover:cursor-pointer hover:text-blue-100 lg:px-4 py-2items-center transition duration-150 ease-in-out text-xl md:px-2 ${location.pathname === '/rapports' && 'text-blue-100 underline underline-offset-8'} `}>
+                  <Link to='/rapports'className={`hover:cursor-pointer md:hover:text-blue-100 lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg md:px-2 ${location.pathname === '/rapports' && 'text-blue-100 underline underline-offset-8'} `} onClick={() => setMobileNavOpen(!mobileNavOpen)}>
                         Rapports
                   </Link>
                  </li>
                  <li>
-                  <ConnectWallet />
+                  <ConnectWallet onClick={() => setMobileNavOpen(!mobileNavOpen)}/>
                 </li>
               </ul>
             ) }

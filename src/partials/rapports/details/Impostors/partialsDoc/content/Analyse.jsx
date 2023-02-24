@@ -1,29 +1,29 @@
 import React from 'react';
-import image from '../../../../../../images/rapports/impostors/analyse.png'
+import image from '../../../../../../images/rapports/impostors/analyse.jpg'
 import avantages from '../../../../../../images/rapports/avantages.png'
 import inconvenients from '../../../../../../images/rapports/inconvenients.png'
 
 
 function Analyse() {
   return (
-    <div className='max-w-6xl mx-12 mt-24 md:mt-16 md:mt-0 lg:mt-0'>
+    <div className='max-w-8xl md:max-w-6xl mx-4 md:mx-12 mt-8 md:mt-0'>
 
-      <div className="space-y-6">
+      <div>
 
-        <div className="space-y-12 text-justify text-xl">
+        <div className="space-y-12 text-lg md:text-xl">
 
             <div className='space-y-12'>
 
-              <div className='text-2xl text-blue-100 flex place-content-center space-x-8 items-center mx-auto'>
+              <div className='text-lg md:text-2xl text-blue-100 flex place-content-center space-x-4  md:space-x-8 items-center mx-auto'   data-aos="fade-up" data-aos-delay="200">
                 <img src={avantages} className='w-20' alt="avantages"/>
                 <p>
                   FORCES ET AVANTAGES
                 </p>
               </div>
 
-              <ul className='list-disc space-y-8 w-9/12 mx-auto z-40'>
+              <ul className='list-disc space-y-8 md:w-9/12 mx-auto z-40' data-aos="fade-up" data-aos-delay="400">
 
-                <li className='z-40'>
+                <li>
                 Style de gameplay populaire amusant, qui attire déjà près d’un demi milliard d'utilisateurs actifs mensuels avec le jeu “Among Us”.
                 </li>
 
@@ -58,7 +58,7 @@ function Analyse() {
 
             </div>
 
-            <div className='w-9/12 mx-auto'>
+            <div className='md:w-9/12 mx-auto' data-aos="fade-up" data-aos-delay="200">
 
             <img src={image} className='rounded-xl drop-shadow-2xl' alt="impostors" />
 
@@ -66,14 +66,14 @@ function Analyse() {
 
             <div className='space-y-12'>
 
-            <div className='text-2xl text-blue-100 flex place-content-center space-x-8 items-center mx-auto'>
+              <div className='text-lg md:text-2xl text-blue-100 flex place-content-center space-x-4 md:space-x-8 items-center mx-auto'  data-aos="fade-up" data-aos-delay="200">
                 <img src={inconvenients} className='w-20' alt="inconvenients"/>
                 <p>
                   FACTEURS DE RISQUE
                 </p>
               </div>
 
-              <ul className='list-disc space-y-8 w-9/12 mx-auto z-40'>
+              <ul className='list-disc space-y-8 md:w-9/12 mx-auto z-40'  data-aos="fade-up" data-aos-delay="400">
 
                 <li>
                 Le sentiment de la communauté suite à l'annonce du prix initial du mint d’un personnage d’IMPOSTORS a été largement négatif. Il faut quand même prendre en compte que de ce fait, Le prix du mint a été réduit et que plus d’informations ont étés divulguées à la communauté.

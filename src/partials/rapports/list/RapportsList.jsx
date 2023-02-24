@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import impostors from '../../../images/rapports/impostors/impostors-main.png';
-import rapport3 from '../../../images/rapports/rapport3/rapport3.png';
-import rapport4 from '../../../images/rapports/rapport4/rapport4.png';
-import rapport2 from '../../../images/rapports/rapport2/rapport2.png';
-import rapport5 from '../../../images/rapports/rapport5/rapport5.png';
-import rapport6 from '../../../images/rapports/rapport6/rapport6.png';
+import impostors from '../../../images/rapports/impostors/impostors-main.jpg';
+import rapport3 from '../../../images/rapports/rapport3/rapport3.jpg';
+import rapport4 from '../../../images/rapports/rapport4/rapport4.jpg';
+import rapport2 from '../../../images/rapports/rapport2/rapport2.jpg';
+import rapport5 from '../../../images/rapports/rapport5/rapport5.jpg';
+import rapport6 from '../../../images/rapports/rapport6/rapport6.jpg';
 
 function RapportsList() {
 
   const initialRapports = [
     {
         title: 'Impostors',
-        content: `Un jeu de détection sociale comme Among Us, mais avec une qualité graphique AAA et des mécanismes de P&E. Premier jeux dans un “social metaverse” qui comprendra aussi des mini jeux, comme “courses d’OVNI” “bataille d’animaux” et des modes de jeux créés par les utilisateurs.`,
+        content: `Un jeu de détection sociale comme Among Us, mais avec une qualité graphique AAA et des mécanismes de P&E. Premier jeux dans un “social metaverse” qui comprendra aussi des mini jeux, comme “courses d’OVNI” “bataille d’animaux” et des modes de jeu créés par les utilisateurs.`,
         date: 'Mars 2023',
         image: impostors,
         open: true
@@ -65,7 +65,7 @@ function RapportsList() {
   }
 
   return (
-    <section className='mt-28'>
+    <section className='mt-12'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col py-8 md:py-32 ">
 
@@ -74,7 +74,7 @@ function RapportsList() {
           </div>
 
           <div className="max-w-full md:max-w-none">
-            <div className="grid gap-x-4 gap-y-12 grid-cols-2 md:grid-cols-3 md:gap-x-6 md:gap-y-24 items-start">
+            <div className="grid gap-x-4 gap-y-12 grid-cols-1 md:grid-cols-3 md:gap-x-6 md:gap-y-24 items-start">
 
               {
                 rapports.map((rapport, i) => {
@@ -91,7 +91,7 @@ function RapportsList() {
                       <Link className="h3 hover:text-gray-100 transition duration-150 ease-in-out" to="/blog-post">{title}</Link>
                     </h3>
                   </header>
-                <p className="text-lg text-gray-400 grow">{content}</p>
+                <p className="text-base md:text-lg text-gray-400 grow">{content}</p>
                 <footer className=" text-right mt-4">
                   <div className="font-medium ">
                     <span className="text-gray-400">{date}</span>
