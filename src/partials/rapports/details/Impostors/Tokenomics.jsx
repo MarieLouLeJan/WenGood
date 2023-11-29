@@ -1,11 +1,11 @@
 import React from 'react';
-import openSea from '../../../../../../images/rapports/opensea.svg'
-import phase1 from '../../../../../../images/rapports/impostors/pet-phase1.png'
-import phase2 from '../../../../../../images/rapports/impostors/pet-phase2.png'
-import phase3 from '../../../../../../images/rapports/impostors/pet-phase3.png'
-import phase4 from '../../../../../../images/rapports/impostors/pet-phase4.png'
-import roadmapUFO from '../../../../../../images/rapports/impostors/roadmapUFO.png'
-import roadmapUFO2 from '../../../../../../images/rapports/impostors/roadmapUFO2.png'
+import openSea from '../../../../images/rapports/opensea.svg'
+import phase1 from '../../../../images/rapports/impostors/pet-phase1.png'
+import phase2 from '../../../../images/rapports/impostors/pet-phase2.png'
+import phase3 from '../../../../images/rapports/impostors/pet-phase3.png'
+import phase4 from '../../../../images/rapports/impostors/pet-phase4.png'
+import roadmapUFO from '../../../../images/rapports/impostors/roadmapUFO.png'
+import roadmapUFO2 from '../../../../images/rapports/impostors/roadmapUFO2.png'
 
 function Tokenomics() {
 

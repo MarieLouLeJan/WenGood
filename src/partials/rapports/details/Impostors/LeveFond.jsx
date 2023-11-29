@@ -1,5 +1,5 @@
 
-import fonds from '../../../../../../images/rapports/impostors/fonds.png'
+import fonds from '../../../../images/rapports/impostors/fonds.png'
 
 
 function LeveFond() {

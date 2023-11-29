@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import Transition from '../../../../../utils/TransitionDoc';
+import Transition from '../../../../utils/TransitionDoc'
 import Scroll from 'react-scroll'
 
 
@@ -57,7 +57,6 @@ function Sidebar({
               <nav className="md:block">
 
                 <div className='md:block pb-4'>
-                  <p className='text-center text-xl text-blue-100 md:pb-2'>Impostors</p>
                   {sidebarOpen && (
                     <div className=''>
                       {/* <VscChromeClose size={25} className="text-blue-100 sticky left-52" onClick={() => setSidebarOpen(false)}/> */}
@@ -69,7 +68,7 @@ function Sidebar({
                   {categories.map((cat, i) =>
                     (
                       <li key={i}>
-                        <button className={`hover:text-blue-100 px-4 py-2 flex space-x-4 items-center transition duratioease-in-out ${title === cat && `text-blue-100`}`} onClick={() => handleCLick(cat)}>
+                        <button className={`hover:text-blue-100 px-4 py-2 flex space-x-4 items-center transition duration ease-in-out ${title === cat && `text-blue-100`}`} onClick={() => handleCLick(cat)}>
                           <div className=''>
                             <VscDebugBreakpointDataUnverified size={25} className='text-blue-100'/>
                           </div>

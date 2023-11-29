@@ -28,7 +28,7 @@ function Header() {
   const location = useLocation();
 
   const logoLocation = () => {
-    if (location.pathname === '/') {
+    if (location.pathname === '/home') {
       return (
         <Scroll.Link className="flex hover:cursor-pointer" to='wengood' spy={true} smooth={true} offset={-200} duration={500} delay={100} >
           <img src={logo} className='w-14 h-16' alt="wengood" />
@@ -38,9 +38,9 @@ function Header() {
           </div>
         </Scroll.Link>
       )
-    } else if (location.pathname !== '/') {
+    } else if (location.pathname !== '/home') {
       return (
-        <Link to="/" className="flex hover:cursor-pointer ">
+        <Link to="/home" className="flex hover:cursor-pointer ">
           <img src={logo} className='w-14 h-16' alt="wengood" />
           <div className='my-auto text-center'>
             <h4 className='h4 text-sm tracking-widest'>WEN GOOD </h4>
@@ -76,12 +76,12 @@ function Header() {
           <nav className="hidden md:flex md:grow">
 
             {/* Home menu links */}
-            { location.pathname === '/' && (
+            { location.pathname === '/home' && (
               <ul className="flex grow justify-end flex-wrap items-center">
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
-                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-120} duration={500} delay={100}  className="md:hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg  md:px-2" activeClass="underline underline-offset-8 text-blue-200"> 
+                      <Scroll.Link to={elem} spy={true} smooth={true} offset={-120} duration={500} delay={100}  className="md:hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg  md:px-2" activeClass="underline underline-offset-8 text-blue-200 font-bold"> 
                         {elem}
                       </Scroll.Link>
                     </li>
@@ -94,12 +94,12 @@ function Header() {
             ) }
 
             {/* Rapport menu links */}
-            { location.pathname !== '/' && (
+            { location.pathname !== '/home' && (
               <ul className="flex grow justify-end flex-wrap items-center">
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
-                      <Link to='/' className="md:hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg md:px-2"> 
+                      <Link to='/home' className="md:hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg md:px-2"> 
                         {elem}
                       </Link>
                     </li>
@@ -137,7 +137,7 @@ function Header() {
             {/*Mobile navigation */}
             <nav id="mobile-nav" ref={mobileNav} className="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out " style={mobileNavOpen ? { maxHeight: mobileNav.current.scrollHeight, opacity: 1 } : { maxHeight: 0, opacity: .8 } }>
 
-              { location.pathname === '/' && (
+              { location.pathname === '/home' && (
               <ul className="bg-bg-200 px-4 py-4 text-center">
                 { navHome.map((elem, i) => {
                   return (
@@ -157,12 +157,12 @@ function Header() {
               </ul>
             ) }
 
-            { location.pathname !== '/' && (
+            { location.pathname !== '/home' && (
               <ul className="bg-bg-200 px-4 py-4 text-center">
                 { navHome.map((elem, i) => {
                   return (
                     <li key={i}>
-                      <Link to='/' className="md:hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg md:px-2"> 
+                      <Link to='/home' className="md:hover:text-blue-100 hover:cursor-pointer lg:px-4 py-2items-center transition duration-150 ease-in-out text-lg md:px-2"> 
                         {elem}
                       </Link>
                     </li>

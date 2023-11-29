@@ -1,6 +1,6 @@
-import roadmap from '../../../../../../images/rapports/impostors/roadmap.png'
-import roadmap1 from '../../../../../../images/rapports/impostors/roadmap1.png'
-import roadmap2 from '../../../../../../images/rapports/impostors/roadmap2.png'
+import roadmap from '../../../../images/rapports/impostors/roadmap.png'
+import roadmap1 from '../../../../images/rapports/impostors/roadmap1.png'
+import roadmap2 from '../../../../images/rapports/impostors/roadmap2.png'
 
 function Roadmap() {
   return (

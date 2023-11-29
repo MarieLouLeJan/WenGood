@@ -36,6 +36,24 @@ export default {
           2: '#8F6C84',
           3: '#DA72F7',
           4: '#7EC0A9'
+        },
+        discord: {
+          1: '#5562EA'
+        },
+        twitter: {
+          1: '#1D9BF0'
+        },
+        youtube: {
+          1: '#FF0000'
+        },
+        medium: {
+          1: '#000000'
+        },
+        insta: {
+          1: '#AE31A4'
+        },
+        telegram: {
+          1: '#28A4E4'
         }
       },
       spacing: {

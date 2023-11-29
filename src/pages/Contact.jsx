@@ -85,7 +85,7 @@ function Contact() {
 
                 <div className="flex flex-wrap -mx-3 mt-6">
                   <div className="w-full px-3">
-                    <button type='submit' className="btn text-lg text-bg-200 bg-blue-100 hover:bg-bg-200 hover:text-blue-100 w-full">Envoyer</button>
+                    <button type='submit' className="btn text-lg text-bg-200 bg-blue-100 hover:bg-bg-200 hover:text-blue-100 hover:border-2 hover:border-blue-100 my-4 rounded-lg transition duration-700 w-full">Envoyer</button>
                   </div>
                 </div>
 

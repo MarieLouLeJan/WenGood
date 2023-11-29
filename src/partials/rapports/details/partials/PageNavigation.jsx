@@ -22,7 +22,7 @@ function PageNavigation({
   return (
     <div className="flex items-center justify-between space-y-0 sm:space-x-4 content-between text-sm md:text-base md:border-none mt-16">
       
-        <button className={`flex items-center justify-between space-x-1 md:space-x-4 ${prev.length > 0 && 'border border-blue-100 rounded-lg'} py-1 px-2 md:border-none`} onClick={() => handlePrev(prev)}>
+        <button className={`flex items-center justify-between space-x-1 md:space-x-4 ${prev.length > 0 && 'border border-blue-100 rounded-lg'} py-2 px-4 `} onClick={() => handlePrev(prev)}>
           <div className={`${!prev && 'hidden'}`}>
             <AiOutlineArrowLeft size={30} className='text-blue-100'/>
           </div>
@@ -30,7 +30,7 @@ function PageNavigation({
         </button>
 
       {next &&
-        <button className="flex items-center justify-between  space-x-1 md:space-x-4  border border-blue-100 rounded-lg py-1 px-2 md:border-none" onClick={() => handleNext(next)}>
+        <button className="flex items-center justify-between space-x-1 md:space-x-4 border border-blue-100 rounded-lg py-2 px-4" onClick={() => handleNext(next)}>
           <span className='my-auto md:hover:text-blue-100'>{next}</span>
           <div className='my-auto'>
             <AiOutlineArrowRight size={30} className='text-blue-100'/>

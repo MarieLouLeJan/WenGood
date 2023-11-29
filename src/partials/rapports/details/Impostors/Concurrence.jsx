@@ -1,5 +1,5 @@
 import React from 'react';
-import amongUs from '../../../../../../images/rapports/impostors/amongUs.png'
+import amongUs from '../../../../images/rapports/impostors/amongUs.png'
 
 
 

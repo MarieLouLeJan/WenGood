@@ -1,5 +1,5 @@
-import gameplay from '../../../../../../images/rapports/impostors/impostors-gameplay.png'
-import YoutubeEmbed from '../../../../../../utils/YoutubeEnbeded';
+import gameplay from '../../../../images/rapports/impostors/impostors-gameplay.png'
+import YoutubeEmbed from '../../../../utils/YoutubeEnbeded';
 
 
 

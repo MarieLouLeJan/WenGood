@@ -1,7 +1,7 @@
 import React from 'react';
-import image from '../../../../../../images/rapports/impostors/analyse.jpg'
-import avantages from '../../../../../../images/rapports/avantages.png'
-import inconvenients from '../../../../../../images/rapports/inconvenients.png'
+import image from '../../../../images/rapports/impostors/analyse.jpg'
+import avantages from '../../../../images/rapports/avantages.png'
+import inconvenients from '../../../../images/rapports/inconvenients.png'
 
 
 function Analyse() {

@@ -1,6 +1,6 @@
 import team from '../../images/wenGood/team_landing.png'
 
-function wenGood() {
+function WenGood() {
 
   return (
     <section>
@@ -25,5 +25,5 @@ function wenGood() {
   );
 }
 
-export default wenGood;
+export default WenGood;
 

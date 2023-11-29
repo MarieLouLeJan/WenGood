@@ -10,12 +10,6 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
 function Team() {
 
-  useEffect(() => {
-    console.log(window.innerWidth)
-  })
-
-
-
   const [ showDescr, setShowDescr ] = useState([
     false,
     false,
@@ -89,7 +83,7 @@ function Team() {
           </div>
 
           <div className="sm:flex sm:flex-wrap sm:justify-center -my-4 sm:-my-8 sm:-mx-3" >
-            { team.map((t, i) => {
+            {/* { team.map((t, i) => {
 
               const { img, name, position, description, linkedin } = t;
 
@@ -97,7 +91,7 @@ function Team() {
 
                 <div key={i} className={`pb-8 mx-auto w-full md:w-1/3 py-4 md:cursor-pointer ${showDescr[i]  && 'md:my-auto'}`}  onClick={() => toggleDesciption(i)} >
 
-                  <img className={`rounded-full mb-4 mx-auto border-solid border-2 border-blue-100 ${showDescr[i] && 'md:hidden'}`} src={img} width="200" height="200" alt={name}/>
+                  <img className={`rounded-full mb-4 mx-auto border-solid border-2 border-blue-100 ${showDescr[i] && 'md:hidden'} transform hover:scale-105 transition duration-700 ease-out`} src={img} width="200" height="200" alt={name}/>
 
                   <div className='flex flex-col space-y-1' data-aos="fade-up" data-aos-delay="200">
                     <p className='text-xl mx-auto'>{name}</p>
@@ -118,7 +112,7 @@ function Team() {
                   </div>
 
                 </div>
-              )})}
+              )})} */}
 
           </div>
         </div>

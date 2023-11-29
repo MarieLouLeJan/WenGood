@@ -1,7 +1,7 @@
 import { BsTwitter } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import { AiFillYoutube } from 'react-icons/ai'
-import YoutubeEmbed from '../../../../../../utils/YoutubeEnbeded';
+import YoutubeEmbed from '../../../../utils/YoutubeEnbeded';
 
 
 function Marketing() {
@@ -18,11 +18,11 @@ function Marketing() {
                 Pour le moment, la majeure partie du marketing a été effectuée par le chef du projet, Elliot Wainman, qui est un des principaux influenceurs dans le domaine des jeux blockchain/NFT. Il est à l’avant-garde depuis 2018 et a rassemblé une communauté de plus de 1,2 million d’abonnés sur YouTube et Twitter confondus.
               </p>
                 <Link className='flex flex-row space-x-4 items-center' to='https://www.youtube.com/@elliotrades_official'>
-                  <AiFillYoutube size={35} color={'red'}/>
+                  <AiFillYoutube size={35} className='text-youtube-1'/>
                   <span className='font-semibold'>Youtube - 576K</span>
                 </Link> 
                 <Link className='flex space-x-5 items-center' to='https://www.youtube.com/@elliotrades_official'>
-                  <BsTwitter size={30} className='text-blue-100'/>
+                  <BsTwitter size={30} className='text-twitter-1'/>
                   <span className='font-semibold'>Twitter - 698.6K</span>
                 </Link> 
               <p>

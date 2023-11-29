@@ -18,7 +18,7 @@ function RapportsList() {
         open: true
     },
     {
-        title: 'Loremipsss',
+        title: 'BigTime',
         content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam vitae, amet explicabo commodi molestias a alias facilis cumque temporibus cum possimus autem esse nobis omnis maxime id officia soluta velit impedit illo natus tempore illum! Soluta dolorum impedit porro aliquam.',
         date: 'Mars 2023',
         image: rapport2,

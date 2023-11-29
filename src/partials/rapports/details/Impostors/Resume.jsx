@@ -1,6 +1,6 @@
 import React from 'react';
-import impostors from '../../../../../../images/rapports/impostors/resume.png';
-import jauge from '../../../../../../images/rapports/impostors/jauge.png'
+import impostors from '../../../../images/rapports/impostors/resume.png';
+import jauge from '../../../../images/rapports/impostors/jauge.png'
 import { BsTwitter, BsDiscord } from 'react-icons/bs'
 import { BiWorld } from 'react-icons/bi'
 import { Link } from 'react-router-dom';
@@ -11,11 +11,11 @@ function Resume() {
   return (
     <div className='max-w-8xl md:max-w-6xl mx-4 md:mx-12 mt-8 md:mt-0 text-lg md:text-xl'>
       
-      <header className="mb-12 mx-auto" data-aos="fade-up" data-aos-delay="200">
+      <header className="mb-12 mx-auto space-y-8" data-aos="fade-up" data-aos-delay="200">
         <div className='flex md:w-10/12 flex-col items-center mx-auto'>
           <img src={impostors} alt="impostors"/>
         </div>
-        <div className='flex w-10/12 md:w-7/12 flex-col items-center mx-auto'>
+        <div className='flex w-10/12 md:w-10/12 flex-col items-center mx-auto border border-blue-100 rounded-lg p-4'>
           <img src={jauge} alt="impostors-jauge"/>
         </div>
       </header>
@@ -32,13 +32,13 @@ function Resume() {
                 <BiWorld size={30} className="text-blue-100" />
               </a>
               <a target='_blank' href='https://twitter.com/PlayImpostors'>
-                <BsTwitter size={30} className="text-blue-100" />
+                <BsTwitter size={30} className="text-twitter-1" />
               </a>
               <a target='_blank' href='https://discord.com/invite/impostors'>
-                <BsDiscord size={30} className="text-blue-100" />
+                <BsDiscord size={30} className="text-discord-1" />
               </a>
               <a target='_blank' href='https://medium.com/@impostors'>
-                <AiFillMediumSquare size={30} className="text-blue-100" />
+                <AiFillMediumSquare size={30} className="text-gray-100" />
               </a>
             </div>
             <p className='text-blue-100 mt-4'>
